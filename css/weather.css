@@ -1,0 +1,42 @@
+html,body {
+	font-size: 16px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #374c70;
+	color: #333;
+}
+ul,li {
+	list-style: none;
+	padding: 0;
+}
+div#weathercontainer {
+	width: 640px;
+	max-width: 90%;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 3px;
+	padding: 10px 0;
+	box-sizing: border-box;
+	max-height: 80vh;
+	margin-top: 10vh;
+	overflow-y: auto;
+}
+time {
+  text-align: center;
+  display: block;
+  font-size: 3.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0px;
+}
+time i.owf { transform: translate(10px, 7px); }
+div#weathercontainer ul {
+  font-size: 1.15rem;
+  line-height: 2rem;
+}
+div#weathercontainer ul li {
+	padding: 0 10px;
+}
+div#weathercontainer ul li:nth-child(even) {
+	background: #ddd;
+}
