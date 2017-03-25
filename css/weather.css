@@ -40,8 +40,16 @@ h2 {
     display: inline-block;
     width: 100%;
 }
+div#insidecontainer {
+    background: #8bc34a;
+		color: #000;
+}
 div#weathercontainer {
     background: #FFC107;
+		color: #000;
+}
+div#forecastcontainer {
+    background: #00bcd4;
 		color: #000;
 }
 time {

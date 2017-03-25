@@ -41,8 +41,8 @@
 			</div>
 
 
-			<div id="insidecontainer" class="width33 left">
-				<h2>inside</h2>
+			<div id="forecastcontainer" class="width33 left">
+				<h2>forecast</h2>
 			</div>
 
 		</div>
