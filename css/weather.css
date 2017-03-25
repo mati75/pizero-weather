@@ -26,6 +26,7 @@ div#pagecontent {
 div.width33 {
     width: 33%;
     margin: 10px 5px;
+		border-radius: 3px;
 }
 h2 {
     color: #333;
@@ -41,12 +42,12 @@ h2 {
 }
 div#weathercontainer {
     background: #FFC107;
+		color: #000;
 }
 time {
   text-align: center;
   display: block;
   font-size: 3.5rem;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 0px;
 }
 time i.owf { transform: translate(10px, 7px); }
