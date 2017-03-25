@@ -1,4 +1,4 @@
-# pizero-weather
+# pizero-weather proj
 ```
 raspberry			Pi Zero W
 lcd				makibes 7''
