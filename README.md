@@ -1,9 +1,9 @@
 # pizero-weather
 
 raspberry			Pi Zero W
-lcd						makibes 7''
+lcd				makibes 7''
 sensors				bmp 180 	pressure&temp
-							dht11 		humidity&temp
+				dht11 		humidity&temp
 
 -------
 
