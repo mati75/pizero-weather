@@ -18,27 +18,47 @@ div#pagecontent {
 	height: 100vh;
 	margin: 0 auto;
 	background: #333;
-	border-radius: 3px;
 	padding: 0 5px;
 	box-sizing: border-box;
 	overflow: hidden;
 }
-div.width33 {
-    width: 33%;
-    margin: 10px 5px;
-		border-radius: 3px;
+div.col.width33 {
+	width: 33.33333%;
+	margin: 10px 0;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+div.col > div {
+	border-radius: 3px;
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 100%;
 }
 h2 {
     color: #333;
     font-weight: 100;
     text-align: center;
     margin: 0;
-    font-size: 18px;
+    font-size: 1rem;
     text-transform: uppercase;
     padding: 10px;
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
+}
+div#timecontainer {
+    background: #fff;
+		color: #000;
+}
+div#timecontainer h2 {
+	font-size: 3rem;
+	margin: 25px 0 0 0;
+	padding: 0;
+}
+div#timecontainer p {
+	text-align: center;
+  font-size: 1rem;
+	margin: 0 0 25px 0;
 }
 div#insidecontainer {
     background: #8bc34a;
