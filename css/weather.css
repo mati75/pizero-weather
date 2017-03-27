@@ -51,13 +51,13 @@ div#timecontainer {
 		color: #000;
 }
 div#timecontainer h2 {
-	font-size: 3rem;
+	font-size: 5rem;
 	margin: 25px 0 0 0;
 	padding: 0;
 }
 div#timecontainer p {
 	text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 	margin: 0 0 25px 0;
 }
 div#insidecontainer {
@@ -75,7 +75,7 @@ div#forecastcontainer {
 time {
   text-align: center;
   display: block;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   padding-bottom: 0px;
 }
 time i.owf { transform: translate(10px, 7px); }
