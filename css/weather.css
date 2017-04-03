@@ -15,7 +15,7 @@ ul,li {
 div#pagecontent {
 	width: 1024px;
 	max-width :100%;
-	height: 100vh;
+	height: 600px;
 	margin: 0 auto;
 	background: #333;
 	padding: 0 5px;
@@ -50,7 +50,7 @@ h2 {
 div#timecontainer {
     background: #333;
 		color: #fff;
-		height: 256px;
+		height: 310px;
 }
 div#timecontainer h2 {
 	color: #fff;
@@ -73,8 +73,8 @@ div#insidecontainer h3 {
     font-size: 2.25rem;
     font-weight: 400;
     text-align: center;
-    margin: 5px 5%;
-    padding: 0px 0 20px 0;
+    margin: 8px 5%;
+    padding: 1px 0 20px 0;
     display: inline-block;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
     width: 90%;
@@ -95,7 +95,7 @@ div#insidecontainer small {
 
 div#chartcontainer {
     background: #fff;
-    height: 258px;
+    height: 300px;
 }
 
 
@@ -107,6 +107,7 @@ div#weathercontainer {
 div#forecastcontainer {
     background: #00bcd4;
 		color: #000;
+		height: 580px;
 }
 time {
 	text-align: center;
@@ -136,7 +137,7 @@ div#forecastcontainer ul.forecast-day {
     clear: both;
     display: inline-block;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 0 5%;
 }
 div#forecastcontainer ul.forecast-day:last-child {
@@ -149,7 +150,7 @@ div#forecastcontainer ul li.text {
 }
 div#forecastcontainer ul li.icon {
 	width: 25%;
-	font-size: 1.75rem;
+	font-size: 2rem;
 	line-height: 3rem;
 	text-align: right;
 }
