@@ -68,7 +68,7 @@ div#insidecontainer {
 		color: #000;
 }
 div#insidecontainer h3 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 400;
     text-align: center;
     margin: 5px 5%;
@@ -77,6 +77,9 @@ div#insidecontainer h3 {
     border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
     width: 90%;
     box-sizing: border-box;
+}
+div#insidecontainer h3.temp {
+    font-size: 3.5rem;
 }
 div#insidecontainer h3:last-child {
     border-bottom: none;
