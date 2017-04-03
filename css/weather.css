@@ -46,6 +46,7 @@ h2 {
     display: inline-block;
     width: 100%;
 }
+
 div#timecontainer {
     background: #fff;
 		color: #000;
@@ -60,14 +61,38 @@ div#timecontainer p {
   font-size: 1.5rem;
 	margin: 0 0 25px 0;
 }
+
+
 div#insidecontainer {
     background: #8bc34a;
 		color: #000;
 }
+div#insidecontainer h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 5px 5%;
+    padding: 0px 0 20px 0;
+    display: inline-block;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    width: 90%;
+    box-sizing: border-box;
+}
+div#insidecontainer h3:last-child {
+    border-bottom: none;
+}
+div#insidecontainer small {
+	display: block;
+	clear: both;
+	font-size: 1.15rem;
+}
+
+
 div#weathercontainer {
     background: #FFC107;
 		color: #000;
 }
+
 div#forecastcontainer {
     background: #00bcd4;
 		color: #000;
