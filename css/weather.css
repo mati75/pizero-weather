@@ -78,13 +78,37 @@ time {
   font-size: 2.5rem;
   padding-bottom: 0px;
 }
-time i.owf { transform: translate(10px, 7px); }
+time i { margin-left: 20px; }
 div#weathercontainer ul {
   font-size: 1.15rem;
   line-height: 2rem;
 }
-div#weathercontainer ul li {
+div#weathercontainer ul li,
+div#forecastcontainer ul li {
 	padding: 0 10px;
+	box-sizing: border-box;
+}
+div#forecastcontainer ul.forecast-day {
+    width: 90%;
+    clear: both;
+    display: inline-block;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    margin: 0 5%;
+}
+div#forecastcontainer ul.forecast-day:last-child {
+	border-bottom: 0;
+	margin-bottom: 15px;
+}
+div#forecastcontainer ul li.text {
+	width: 75%;
+	line-height: 26px;
+}
+div#forecastcontainer ul li.icon {
+	width: 25%;
+	font-size: 26px;
+	line-height: 52px;
+	text-align: right;
 }
 /*div#weathercontainer ul li:nth-child(even) {
 	background: #444;
