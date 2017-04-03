@@ -13,13 +13,13 @@
 
 				<div id="timecontainer"></div>
 
-				<div id="insidecontainer"></div>
+				<div id="weathercontainer"></div>
 
 			</div>
 
 			<div class="col col2 width33 left">
 
-				<div id="weathercontainer"></div>
+				<div id="insidecontainer"></div>
 
 			</div>
 

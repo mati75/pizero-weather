@@ -9,7 +9,8 @@ $data=json_decode($json,true);
 //var_dump($data);
 //Get current Temperature in Celsius
 $time = getdate();
-if ( strtotime($time['hours']) < 7 || strtotime($time['hours'] > 20) ) {
+// echo $time['hours'].'ddd';
+if ( $time['hours'] < 7 || $time['hours'] > 20 ) {
 	$nightday='night';
 } else {
 	$nightday='day';
