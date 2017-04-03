@@ -48,10 +48,12 @@ h2 {
 }
 
 div#timecontainer {
-    background: #fff;
-		color: #000;
+    background: #333;
+		color: #fff;
+		height: 256px;
 }
 div#timecontainer h2 {
+	color: #fff;
 	font-size: 5rem;
 	margin: 25px 0 0 0;
 	padding: 0;
@@ -88,6 +90,12 @@ div#insidecontainer small {
 	display: block;
 	clear: both;
 	font-size: 1.15rem;
+}
+
+
+div#chartcontainer {
+    background: #fff;
+    height: 258px;
 }
 
 

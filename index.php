@@ -21,6 +21,8 @@
 
 				<div id="insidecontainer"></div>
 
+				<div id="chartcontainer"></div>
+
 			</div>
 
 			<div class="col col2 width33 left">
@@ -31,6 +33,7 @@
 
 		</div>
 		<script src="js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script src="js/pizero-weather.js"></script>
 	</body>
 </html
