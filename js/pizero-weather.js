@@ -15,7 +15,7 @@ var loadblock = function(target,blockname,interval) {
 jQuery(document).ready(function(){
 
 	loadblock('#timecontainer','clock.php',1);
-	loadblock('#insidecontainer','inside.php',1);
+	loadblock('#insidecontainer','inside.php',0.1);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',120);
 
