@@ -73,12 +73,19 @@ div#forecastcontainer {
 		color: #000;
 }
 time {
-  text-align: center;
-  display: block;
-  font-size: 2.5rem;
-  padding-bottom: 0px;
+	text-align: center;
+	display: block;
+	font-size: 2.75rem;
+	line-height: 2rem;
+	padding-bottom: 0px;
+	margin-top: 10px;
 }
 time i { margin-left: 20px; }
+time small {
+	display: block;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
 div#weathercontainer ul {
   font-size: 1.15rem;
   line-height: 2rem;
@@ -106,8 +113,8 @@ div#forecastcontainer ul li.text {
 }
 div#forecastcontainer ul li.icon {
 	width: 25%;
-	font-size: 26px;
-	line-height: 52px;
+	font-size: 1.75rem;
+	line-height: 3rem;
 	text-align: right;
 }
 /*div#weathercontainer ul li:nth-child(even) {
