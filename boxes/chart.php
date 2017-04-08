@@ -19,8 +19,10 @@ $(document).ready(function () {
                     // set up the updating of the chart each second
                     var series = this.series[0];
                     setInterval(function () {
+												var tempread = $('h3.temp').attr('data-temp');
+												tempread = tempread.substring(0, tempread.length - 1);
                         var x = (new Date()).getTime(), // current time
-                            y = parseFloat($('h3.temp').attr('data-temp'));
+                            y = parseFloat(tempread);
                         series.addPoint([x, y], true, true);
                     }, 60000)
                 }
