@@ -19,9 +19,8 @@ $(document).ready(function () {
                     // set up the updating of the chart each second
                     var series = this.series[0];
                     setInterval(function () {
-												var tempread = $('h3.temp').attr('data-temp');
-												tempread = tempread.substring(0, tempread.length - 1);
-                        var x = (new Date()).getTime(), // current time
+												var tempread = $('h3.temp').attr('data-temp'),
+                        		x = (new Date()).getTime(), // current time
                             y = parseFloat(tempread);
                         series.addPoint([x, y], true, true);
                     }, 60000)
@@ -63,15 +62,15 @@ $(document).ready(function () {
             data: (function () {
                 // generate an array of random data
                 var data = [],
-                    time = (new Date()).getTime(),
-                    i;
-
-                for (i = -19; i <= 0; i += 1) {
-                    data.push({
-                        x: time + i * 1000,
-                        y: Math.random()
-                    });
-                }
+                //     time = (new Date()).getTime(),
+                //     i;
+								//
+                // for (i = -19; i <= 0; i += 1) {
+                //     data.push({
+                //         x: time + i * 1000,
+                //         y: Math.random()
+                //     });
+                // }
                 return data;
             }())
         }]
