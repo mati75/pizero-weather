@@ -9,7 +9,7 @@ $(document).ready(function () {
 					useUTC: false
 			}
 	});
-	var readInterval = 1; // intervallo in minuti
+	var readInterval = 60; // intervallo in minuti
 	Highcharts.chart('chart_temp', {
 			chart: {
 					type: 'spline',

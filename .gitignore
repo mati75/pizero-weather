@@ -1,1 +1,3 @@
-logs/*.json
+logs/temp_.json
+logs/temp_log.json
+logs/press_log.json
