@@ -63,19 +63,9 @@ $(document).ready(function () {
 			series: [{
 					name: 'Temperature',
 					data: (function () {
-							// generate an array of random data
-							var data = [],
-									time = (new Date()).getTime(),
-									i;
-
-							for (i = -24; i <= 0; i += 1) {
-									data.push({
-											x: time + i * (readInterval * 60000),
-											y: getRandomInt(22, 25)
-									});
-							}
-							console.log(data[0]);
-							return data;
+						var data = [];
+						data.push(<?php echo file_get_contents('/var/www/html/pizero-weather/logs/temp_log.json'); ?>)
+						return data;
 					}())
 			}]
 	});
@@ -150,18 +140,9 @@ $(document).ready(function () {
 			series: [{
 					name: 'Pressure',
 					data: (function () {
-							// generate an array of random data
-							var data = [],
-									time = (new Date()).getTime(),
-									i;
-
-							for (i = -24; i <= 0; i += 1) {
-									data.push({
-											x: time + i * (readInterval * 60000),
-											y: getRandomInt(995, 1010)
-									});
-							}
-							return data;
+						var data = [];
+						data.push(<?php echo file_get_contents('/var/www/html/pizero-weather/logs/press_log.json'); ?>)
+						return data;
 					}())
 			}]
 	});

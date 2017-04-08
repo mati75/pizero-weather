@@ -5,15 +5,19 @@ $timestamp = time()*1000;
 $file_temp = '/var/www/html/pizero-weather/logs/temp_log.json';
 $file_press = '/var/www/html/pizero-weather/logs/press_log.json';
 
-// get existing content
+// get existing data
 $current_temp = file_get_contents($file_temp);
-// append data to file
-$current_temp .= "{x: $timestamp, y: $temperature}\n";
+// append data to file (max 25 lines)
+$current_temp .= "{x: $timestamp, y: $temperature},\n";
 $ArrT = explode("\n", $current_temp);
 $ArrT = array_slice($ArrT, -25);
 //var_dump($ArrT);
 $dataT=implode("\n",$ArrT);
-// write contents back to file
+// remove last ,
+$search = ',';
+$replace = '';
+$dataT = strrev(implode(strrev($replace), explode(strrev($search), strrev($dataT), 2)));
+// re-write data to file
 file_put_contents($file_temp, $dataT);
 echo '<pre>';
 var_dump($dataT);
@@ -21,16 +25,20 @@ echo '</pre>';
 
 echo "<br><br><br>";
 
-// get existing content
+// get existing data
 $current_press = file_get_contents($file_press);
-// append data to file
-$current_press .= "{x: $timestamp, y: $pressure}\n";
+// append data to file (max 25 lines)
+$current_press .= "{x: $timestamp, y: $pressure},\n";
 $ArrP = explode("\n", $current_press);
 $ArrP = array_slice($ArrP, -25);
 //var_dump($ArrP);
 $dataP=implode("\n",$ArrP);
-// write contents back to file
-file_put_contents($file_press, $current_press);
+// remove last ,
+$search = ',';
+$replace = '';
+$dataP = strrev(implode(strrev($replace), explode(strrev($search), strrev($dataP), 2)));
+// re-write data to file
+file_put_contents($file_press, $dataP);
 echo '<pre>';
 var_dump($dataP);
 echo '</pre>';
