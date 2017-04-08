@@ -74,6 +74,7 @@ $(document).ready(function () {
 											y: getRandomInt(22, 25)
 									});
 							}
+							console.log(data[0]);
 							return data;
 					}())
 			}]
@@ -114,6 +115,7 @@ $(document).ready(function () {
 			xAxis: {
 					type: 'datetime',
 					tickPixelInterval: readInterval*100,
+					//tickInterval: 120,
 					plotLines: [{
 							value: 0,
 							width: 1,

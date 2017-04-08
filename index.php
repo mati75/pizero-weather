@@ -2,7 +2,7 @@
 <html>
   <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Weather for Milan,IT</title>
+		<title>Pizero Display Panel</title>
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,700" rel="stylesheet">
 		<link href="css/weather-icons.css" rel="stylesheet" type="text/css">
 		<link href="css/weather.css" rel="stylesheet" type="text/css">
