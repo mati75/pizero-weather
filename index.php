@@ -33,7 +33,8 @@
 
 		</div>
 		<script src="js/jquery-3.2.0.min.js"></script>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://code.highcharts.com/highcharts.src.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script src="js/pizero-weather.js"></script>
 	</body>
 </html
