@@ -70,7 +70,7 @@ $(document).ready(function () {
 
 							for (i = -24; i <= 0; i += 1) {
 									data.push({
-											x: time + i * (readInterval * 3600000),
+											x: time + i * (readInterval * 60000),
 											y: getRandomInt(22, 25)
 									});
 							}
@@ -155,7 +155,7 @@ $(document).ready(function () {
 
 							for (i = -24; i <= 0; i += 1) {
 									data.push({
-											x: time + i * (readInterval * 3600000),
+											x: time + i * (readInterval * 60000),
 											y: getRandomInt(995, 1010)
 									});
 							}
