@@ -38,7 +38,7 @@ $(document).ready(function () {
 			},
 			yAxis: {
 					title: {
-							text: 'Value'
+							text: 'Temp.'
 					},
 					plotLines: [{
 							value: 0,
@@ -116,7 +116,7 @@ $(document).ready(function () {
 			},
 			yAxis: {
 					title: {
-							text: 'Value'
+							text: 'Pressure'
 					},
 					plotLines: [{
 							value: 0,

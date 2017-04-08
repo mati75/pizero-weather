@@ -8,7 +8,7 @@ $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 	<?php echo $temperature; ?>&deg;
 	<small>temperature</small>
 </h3>
-<h3 class="pressure" data-pressure="<?php echo $pressure; ?>">
+<h3 class="press" data-press="<?php echo $pressure; ?>">
 	<?php echo $pressure; ?>mbar
 	<small>pressure</small>
 </h3>
