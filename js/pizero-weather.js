@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
 
 	loadblock('#timecontainer','clock.php',1);
 	loadblock('#insidecontainer','inside.php',1);
-	loadblock('#chartcontainer','chart.php',120);
+	loadblock('#chartcontainer','chart.php',60);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',120);
 

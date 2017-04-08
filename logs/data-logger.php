@@ -7,7 +7,7 @@ $file_press = '/var/www/html/pizero-weather/logs/press_log.json';
 
 // get existing data
 $current_temp = file_get_contents($file_temp);
-// append data to file (max 25 lines)
+// append data to file (max 17 lines)
 if ($current_temp=='') :
 	$pre = "";
 else :
@@ -15,7 +15,7 @@ else :
 endif;
 $current_temp .= "$pre{x: $timestamp, y: $temperature}";
 $ArrT = explode("\n", $current_temp);
-$ArrT = array_slice($ArrT, -25);
+$ArrT = array_slice($ArrT, -17);
 //var_dump($ArrT);
 $dataT=implode("\n",$ArrT);
 // remove last ,
@@ -32,7 +32,7 @@ echo "<br><br><br>";
 
 // get existing data
 $current_press = file_get_contents($file_press);
-// append data to file (max 25 lines)
+// append data to file (max 17 lines)
 if ($current_press=='') :
 	$pre = "";
 else :
@@ -40,7 +40,7 @@ else :
 endif;
 $current_press .= "$pre{x: $timestamp, y: $pressure}";
 $ArrP = explode("\n", $current_press);
-$ArrP = array_slice($ArrP, -25);
+$ArrP = array_slice($ArrP, -17);
 //var_dump($ArrP);
 $dataP=implode("\n",$ArrP);
 // remove last ,
