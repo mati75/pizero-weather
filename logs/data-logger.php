@@ -2,8 +2,8 @@
 $temperature = `gpio -x bmp180:100 aread 100` / 10 ;
 $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 $timestamp = time()*1000;
-$file_temp = 'temp_log.json';
-$file_press = 'press_log.json';
+$file_temp = '/var/www/html/pizero-weather/logs/temp_log.json';
+$file_press = '/var/www/html/pizero-weather/logs/press_log.json';
 
 // get existing content
 $current_temp = file_get_contents($file_temp);
