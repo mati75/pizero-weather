@@ -23,7 +23,7 @@ $(document).ready(function () {
                         		x = (new Date()).getTime(), // current time
                             y = parseFloat(tempread);
                         series.addPoint([x, y], true, true);
-                    }, 60000)
+                    }, 10000)
                 }
             }
         },
