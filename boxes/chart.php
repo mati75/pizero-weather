@@ -34,12 +34,13 @@ $(document).ready(function () {
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: readInterval*1000
+					tickPixelInterval: readInterval*100
 			},
 			yAxis: {
 					title: {
 							text: 'Temp.'
 					},
+					tickPixelInterval: 10,
 					plotLines: [{
 							value: 0,
 							width: 1,
@@ -67,10 +68,10 @@ $(document).ready(function () {
 									time = (new Date()).getTime(),
 									i;
 
-							for (i = -5; i <= 0; i += 1) {
+							for (i = -24; i <= 0; i += 1) {
 									data.push({
-											x: time + i * readInterval * 10000,
-											y: getRandomInt(15, 30)
+											x: time + i * (readInterval * 3600000),
+											y: getRandomInt(22, 25)
 									});
 							}
 							return data;
@@ -112,12 +113,19 @@ $(document).ready(function () {
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: readInterval*1000
+					tickPixelInterval: readInterval*100,
+					plotLines: [{
+							value: 0,
+							width: 1,
+							color: '#808080'
+					}]
+
 			},
 			yAxis: {
 					title: {
 							text: 'Pressure'
 					},
+					tickPixelInterval: 10,
 					plotLines: [{
 							value: 0,
 							width: 1,
@@ -145,10 +153,10 @@ $(document).ready(function () {
 									time = (new Date()).getTime(),
 									i;
 
-							for (i = -5; i <= 0; i += 1) {
+							for (i = -24; i <= 0; i += 1) {
 									data.push({
-											x: time + i * readInterval * 10000,
-											y: getRandomInt(970, 1020)
+											x: time + i * (readInterval * 3600000),
+											y: getRandomInt(995, 1010)
 									});
 							}
 							return data;
