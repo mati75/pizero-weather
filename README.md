@@ -13,4 +13,4 @@ nodejs or python/django to gather data from sensors
 ```
 
 
-![scr](imeuro.github.com/pizero-weather/scr/pizero-weather-scr09apr2017.png)
+![scr](https://raw.githubusercontent.com/imeuro/pizero-weather/master/scr/pizero-weather-scr09apr2017.png)
