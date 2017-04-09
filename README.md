@@ -11,3 +11,6 @@ sensors
 lighthttpd to show data via midori browser
 nodejs or python/django to gather data from sensors
 ```
+
+
+![scr](imeuro.github.com/pizero-weather/scr/pizero-weather-scr09apr2017.png)
