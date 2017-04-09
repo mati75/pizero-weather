@@ -25,7 +25,7 @@ $(document).ready(function () {
 													x = (new Date()).getTime(), // current time
 													y = parseFloat(tempread);
 											series.addPoint([x, y], true, true);
-									}, readInterval*60*1000)
+									}, readInterval*60000)
 							}
 					}
 			},
