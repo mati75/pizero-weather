@@ -3,13 +3,14 @@
 raspberry			Pi Zero W
 lcd				makibes 7''
 sensors			
-- bmp 180 	pressure&temp
-- dht11 		humidity&temp
+- bmp 180   pressure&temp
+- dht11   humidity&temp (todo)
 ```
 -------
 ```
 lighthttpd to show data via midori browser
-nodejs or python/django to gather data from sensors
+Highcharts js to graph data
+php cronjob to gather data from sensors
 ```
 
 
