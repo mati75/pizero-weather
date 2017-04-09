@@ -5,7 +5,7 @@ var loadblock = function(target,blockname,interval) {
 	setInterval(function(){
 		jQuery(target).load('boxes/'+blockname);
 		console.debug('block '+blockname+' loaded.');
-	}, interval*60*1000);
+	}, interval*60000);
 
 }
 
