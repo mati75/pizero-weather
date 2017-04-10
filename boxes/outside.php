@@ -1,12 +1,17 @@
 <h2>outside</h2>
 <?php
-$city="Milan";
+$city="Barona";
 $country="IT"; //Two digit country code
-$appid="ba2eb32ada1a3e3b489cadc95e2a9975";
-$url="http://api.openweathermap.org/data/2.5/weather?q=".$city.",".$country."&units=metric&cnt=7&lang=en&appid=".$appid;
+$appid="d72cab79ae210e53";
+$url="http://api.wunderground.com/api/".$appid."/conditions/q/".$country."/".$city.".json";
+
+// example:
+// http://api.wunderground.com/api/d72cab79ae210e53/conditions/q/CA/San_Francisco.json
+
 $json=file_get_contents($url);
 $data=json_decode($json,true);
 //var_dump($data);
+$data=$data['current_observation'];
 //Get current Temperature in Celsius
 $time = getdate();
 // echo $time['hours'].'ddd';
@@ -15,14 +20,16 @@ if ( $time['hours'] < 7 || $time['hours'] > 20 ) {
 } else {
 	$nightday='day';
 }
-echo "<time>". number_format($data['main']['temp'], 1, '.', '')."&deg; <i class=\"wi wi-owm-".$nightday."-".$data['weather'][0]['id']."\"></i>";
-echo "<small>".$data['weather'][0]['main']."</small>";
+echo "<time>". number_format($data['temp_c'], 1, '.', '')."&deg; <i class=\"wi wi-wu-".$data['icon']."\"></i>";
+echo "<small>".$data['weather']."</small>";
 echo "</time>";
 echo "<ul>";
-//echo "<li><strong>Current Weather Condition: </strong><span>".$data['weather'][0]['description']."</span></li>";
-//echo "<li><strong>Min | Max temp: </strong><span>".$data['main']['temp_min']." | ".$data['main']['temp_max']."&deg;</span></li>";
-echo "<li><strong>Pressure: </strong><span>".$data['main']['pressure']."mbar</span></li>";
-echo "<li><strong>Humidity: </strong><span>".$data['main']['humidity']."%</span></li>";
-echo "<li><strong>Wind Speed: </strong><span>".$data['wind']['speed']." km/h</span></li>";
+// $data['pressure_trend'] = 0 = steady, gli altri???
+echo "<li><strong>Feels like: </strong><span>".$data['feelslike_c']."&deg;</span></li>";
+echo "<li><strong>Rainfall: </strong><span>".$data['precip_today_metric']."mm</span></li>";
+echo "<li><strong>Pressure: </strong><span>".$data['pressure_mb']."mbar</span></li>";
+echo "<li><strong>Trend: </strong><span>".$data['pressure_trend']."</span></li>";
+echo "<li><strong>Humidity: </strong><span>".$data['relative_humidity']."%</span></li>";
+echo "<li><strong>Wind: </strong><span>".$data['wind_kph']."km/h</span></li>";
 echo "</ul>";
 ?>

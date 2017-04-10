@@ -1,22 +1,26 @@
 <h2>7 day forecast</h2>
 <?php
-$city="Milan";
+$city="Barona";
 $country="IT"; //Two digit country code
-$appid="ba2eb32ada1a3e3b489cadc95e2a9975";
-$url="http://api.openweathermap.org/data/2.5/forecast/daily?q=".$city.",".$country."&units=metric&cnt=8&lang=en&appid=".$appid;
+$appid="d72cab79ae210e53";
+$url="http://api.wunderground.com/api/".$appid."/forecast10day/q/".$country."/".$city.".json";
+
+// example:
+// http://api.wunderground.com/api/d72cab79ae210e53/forecast10day/q/CA/San_Francisco.json
+
 $json=file_get_contents($url);
 $data=json_decode($json,true);
+$data = $data['forecast']['simpleforecast'];
 // print_r($data);
 
-foreach ($data['list'] as $key => $day) {
-if ($key>0): ?>
+foreach ($data['forecastday'] as $key => $day) {
+if ($key<7): ?>
 	<ul class="forecast-day">
 		<li class="text left">
-			<strong><?php echo gmdate("D, j F Y", $day["dt"]); ?></strong><br>
-			<?php echo floor($day["temp"]["min"]) ?>&deg; | <?php echo floor($day["temp"]["max"]) ?>&deg; - <?php echo $day["weather"][0]["description"] ?>
-			<!-- <pre><?php  var_dump($day); ?></pre> -->
+			<strong><?php echo gmdate("D, j F Y", $day['date']['epoch']); ?></strong><br>
+			<?php echo $day['high']['celsius'] ?>&deg; | <?php echo $day['low']['celsius'] ?>&deg; - <?php echo $day['conditions'] ?>
 		</li>
-		<li class="icon left"><?php echo "<i class=\"wi wi-owm-".$day['weather'][0]['id']."\"></i>"; ?></li>
+		<li class="icon left"><?php echo "<i class=\"wi wi-wu-".$day['icon']."\"></i>"; ?><small><?php echo $day['pop']; ?>%</small></li>
 	</ul>
 <?php
 endif;

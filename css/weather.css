@@ -50,7 +50,7 @@ h2 {
 div#timecontainer {
     background: #333;
 		color: #fff;
-		height: 310px;
+		height: 308px;
 }
 div#timecontainer h2 {
 	color: #fff;
@@ -126,11 +126,19 @@ time small {
 div#weathercontainer ul {
   font-size: 1.15rem;
   line-height: 2rem;
+	display: inline-block;
 }
 div#weathercontainer ul li,
 div#forecastcontainer ul li {
 	padding: 0 10px;
 	box-sizing: border-box;
+}
+div#weathercontainer ul li {
+    width: 50%;
+    float: left;
+}
+div#weathercontainer ul li:nth-child(even) {
+    border-left: 1px dashed rgba(0, 0, 0, 0.15);
 }
 div#forecastcontainer ul.forecast-day {
     width: 90%;
@@ -153,7 +161,13 @@ div#forecastcontainer ul li.icon {
 	font-size: 2rem;
 	line-height: 3rem;
 	text-align: right;
+	position: relative;
 }
-/*div#weathercontainer ul li:nth-child(even) {
-	background: #444;
-}*/
+div#forecastcontainer ul li.icon small {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+}
