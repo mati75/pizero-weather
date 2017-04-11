@@ -12,7 +12,6 @@ var loadblock = function(target,blockpath,interval) {
 jQuery(document).ready(function(){
 
 	loadblock('#timecontainer','boxes/clock.php',1);
-	//loadblock('#gcaldata','js/quickstart.php',1);
 	loadblock('#insidecontainer','boxes/inside.php',1);
 	loadblock('#chartcontainer','boxes/chart.php',10);
 	loadblock('#weathercontainer','boxes/outside.php',30);
