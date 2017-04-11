@@ -15,26 +15,13 @@ $(document).ready(function () {
 					type: 'spline',
 					animation: Highcharts.svg, // don't animate in old IE
 					marginRight: 10,
-					// events: {
-					// 		load: function () {
-					//
-					// 				// set up the updating of the chart each second
-					// 				var series = this.series[0];
-					// 				setInterval(function () {
-					// 						var tempread = $('h3.temp').attr('data-temp'),
-					// 								x = (new Date()).getTime(), // current time
-					// 								y = parseFloat(tempread);
-					// 						series.addPoint([x, y], true, true);
-					// 				}, readInterval*60000)
-					// 		}
-					// }
 			},
 			title: {
 					text: ''
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: readInterval*100
+					tickPixelInterval: 120
 			},
 			yAxis: {
 					title: {
@@ -85,26 +72,13 @@ $(document).ready(function () {
 					type: 'spline',
 					animation: Highcharts.svg, // don't animate in old IE
 					marginRight: 10,
-					// events: {
-					// 		load: function () {
-					//
-					// 				// set up the updating of the chart each second
-					// 				var series = this.series[0];
-					// 				setInterval(function () {
-					// 						var pressread = $('h3.press').attr('data-press'),
-					// 								x = (new Date()).getTime(), // current time
-					// 								y = parseFloat(pressread);
-					// 						series.addPoint([x, y], true, true);
-					// 				}, readInterval*60000)
-					// 		}
-					// }
 			},
 			title: {
 					text: ''
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: readInterval*100,
+					tickPixelInterval: 120,
 					//tickInterval: 120,
 					plotLines: [{
 							value: 0,
