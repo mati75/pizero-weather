@@ -18,7 +18,7 @@ if ($key<7): ?>
 	<ul class="forecast-day">
 		<li class="text left">
 			<strong><?php echo gmdate("D, j F Y", $day['date']['epoch']); ?></strong><br>
-			<?php echo $day['high']['celsius'] ?>&deg; | <?php echo $day['low']['celsius'] ?>&deg; - <?php echo $day['conditions'] ?>
+			<span><?php echo $day['high']['celsius'] ?>&deg; | <?php echo $day['low']['celsius'] ?>&deg; - <?php echo $day['conditions'] ?></span>
 		</li>
 		<li class="icon left"><?php echo "<i class=\"wi wi-wu-".$day['icon']."\"></i>"; ?><small><?php echo $day['pop']; ?>%</small></li>
 	</ul>

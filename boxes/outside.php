@@ -29,7 +29,7 @@ echo "<li><strong>Feels like: </strong><span>".$data['feelslike_c']."&deg;</span
 echo "<li><strong>Rainfall: </strong><span>".$data['precip_today_metric']."mm</span></li>";
 echo "<li><strong>Pressure: </strong><span>".$data['pressure_mb']."mbar</span></li>";
 echo "<li><strong>Trend: </strong><span>".$data['pressure_trend']."</span></li>";
-echo "<li><strong>Humidity: </strong><span>".$data['relative_humidity']."%</span></li>";
+echo "<li><strong>Humidity: </strong><span>".$data['relative_humidity']."</span></li>";
 echo "<li><strong>Wind: </strong><span>".$data['wind_kph']."km/h</span></li>";
 echo "</ul>";
 ?>
