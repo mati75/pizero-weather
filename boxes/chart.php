@@ -21,7 +21,7 @@ $(document).ready(function () {
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: 120
+					tickPixelInterval: 60
 			},
 			yAxis: {
 					title: {
@@ -78,8 +78,7 @@ $(document).ready(function () {
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: 120,
-					//tickInterval: 120,
+					tickPixelInterval: 60,
 					plotLines: [{
 							value: 0,
 							width: 1,
