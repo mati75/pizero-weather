@@ -1,24 +1,25 @@
-var loadblock = function(target,blockname,interval) {
+var loadblock = function(target,blockpath,interval) {
 
-	jQuery(target).load('boxes/'+blockname);
+	jQuery(target).load(blockpath);
 
 	setInterval(function(){
-		jQuery(target).load('boxes/'+blockname);
-		console.debug('block '+blockname+' loaded.');
+		jQuery(target).load(blockpath);
+		//console.debug('block '+blockpath+' loaded.');
 	}, interval*60000);
 
 }
 
-
-
-
 jQuery(document).ready(function(){
 
-	loadblock('#timecontainer','clock.php',1);
-	loadblock('#insidecontainer','inside.php',1);
-	loadblock('#chartcontainer','chart.php',10);
-	loadblock('#weathercontainer','outside.php',30);
-	loadblock('#forecastcontainer','forecast.php',120);
+	loadblock('#timecontainer','boxes/clock.php',1);
+	//loadblock('#gcaldata','js/quickstart.php',1);
+	loadblock('#insidecontainer','boxes/inside.php',1);
+	loadblock('#chartcontainer','boxes/chart.php',10);
+	loadblock('#weathercontainer','boxes/outside.php',30);
+	loadblock('#forecastcontainer','boxes/forecast.php',120);
 
+	setInterval(function(){
+		listUpcomingEvents();
+	}, 30*60000);
 
 });

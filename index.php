@@ -12,6 +12,7 @@
 			<div class="col col1 width33 left">
 
 				<div id="timecontainer"></div>
+				<div id="gcaldata"><?php include('js/quickstart.php') ?></div>
 
 				<div id="weathercontainer"></div>
 
