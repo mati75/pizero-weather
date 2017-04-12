@@ -1,24 +1,31 @@
-var loadblock = function(target,blockpath,interval) {
+var reloadBtn = document.getElementById('reload');
+var loadblock = function(target,blockname,interval) {
 
-	jQuery(target).load(blockpath);
+	jQuery(target).load('boxes/'+blockname);
 
 	setInterval(function(){
-		jQuery(target).load(blockpath);
-		//console.debug('block '+blockpath+' loaded.');
+		jQuery(target).load('boxes/'+blockname);
+		console.debug('block '+blockname+' loaded.');
 	}, interval*60000);
 
 }
 
+
 jQuery(document).ready(function(){
+	reloadBtn.className = "rotate";
+	loadblock('#timecontainer','clock.php',1);
+	loadblock('#insidecontainer','inside.php',1);
+	loadblock('#chartcontainer','chart.php',10);
+	loadblock('#weathercontainer','outside.php',30);
+	loadblock('#forecastcontainer','forecast.php',120);
 
-	loadblock('#timecontainer','boxes/clock.php',1);
-	loadblock('#insidecontainer','boxes/inside.php',1);
-	loadblock('#chartcontainer','boxes/chart.php',10);
-	loadblock('#weathercontainer','boxes/outside.php',30);
-	loadblock('#forecastcontainer','boxes/forecast.php',120);
-
-	setInterval(function(){
-		listUpcomingEvents();
-	}, 30*60000);
+	reloadBtn.click(function(){
+		reloadBtn.className = "rotate";
+		window.location.reload();
+	})
 
 });
+jQuery( window ).load(function() {
+	reloadBtn.className = "";
+});
+

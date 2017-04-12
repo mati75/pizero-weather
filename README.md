@@ -7,15 +7,15 @@ It is possible to switch source for the forecasts (weather underground / openwea
 ### Screenshot
 ![scr](https://raw.githubusercontent.com/imeuro/pizero-weather/master/scr/pizero-weather-scr09apr2017.png)
 
-### Technical data
+### Hardware
 * Raspberry			Pi Zero W / Raspbian OS
 * lcd				    makibes 7''
 * sensors			
   * bmp 180       pressure&temp
   * dht11         humidity&temp (todo)
-* lighttpd to show data via midori browser
+
+### Software
+* lighttpd w/ php
+* midori browser
 * Highcharts js to graph data
 * php cronjob to gather and store data from sensors
-
-
-
