@@ -25,10 +25,14 @@ echo "<small>".$data['weather']."</small>";
 echo "</time>";
 echo "<ul>";
 // $data['pressure_trend'] = 0 = steady, gli altri???
+if ($data['pressure_trend'] == '0') {$PTrend = 'steady'; }
+else if ($data['pressure_trend'] == '+') { $PTrend = 'rising'; }
+else if ($data['pressure_trend'] == '-') { $PTrend = 'falling'; }
+else { $PTrend = 'error!'; }
 echo "<li><strong>Feels like: </strong><span>".$data['feelslike_c']."&deg;</span></li>";
 echo "<li><strong>Rainfall: </strong><span>".$data['precip_today_metric']."mm</span></li>";
 echo "<li><strong>Pressure: </strong><span>".$data['pressure_mb']."mbar</span></li>";
-echo "<li><strong>Trend: </strong><span>".$data['pressure_trend']."</span></li>";
+echo "<li><strong>Trend: </strong><span>".$PTrend."</span></li>";
 echo "<li><strong>Humidity: </strong><span>".$data['relative_humidity']."</span></li>";
 echo "<li><strong>Wind: </strong><span>".$data['wind_kph']."km/h</span></li>";
 echo "</ul>";
