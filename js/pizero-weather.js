@@ -20,5 +20,8 @@ jQuery(document).ready(function(){
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',120);
 
-
+	jQuery('#reload').click(function(){
+		window.location.reload();
+	})
+	
 });
