@@ -1,4 +1,4 @@
-var reloadBtn = document.getElementById('reload');
+var reloadBtn = jQuery('#reload');
 var loadblock = function(target,blockname,interval) {
 
 	jQuery(target).load('boxes/'+blockname);
@@ -12,7 +12,7 @@ var loadblock = function(target,blockname,interval) {
 
 
 jQuery(document).ready(function(){
-	reloadBtn.className = "rotate";
+	//reloadBtn.className = "rotate";
 	loadblock('#timecontainer','clock.php',1);
 	loadblock('#insidecontainer','inside.php',1);
 	loadblock('#chartcontainer','chart.php',10);
@@ -20,12 +20,12 @@ jQuery(document).ready(function(){
 	loadblock('#forecastcontainer','forecast.php',120);
 
 	reloadBtn.click(function(){
-		reloadBtn.className = "rotate";
+		reloadBtn.addClass("rotate");
 		window.location.reload();
 	})
 
 });
-jQuery( window ).load(function() {
-	reloadBtn.className = "";
+jQuery(window).on("load", function() {
+	reloadBtn.removeClass("rotate");
 });
 
