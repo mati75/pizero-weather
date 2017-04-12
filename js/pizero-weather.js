@@ -1,3 +1,4 @@
+var reloadBtn = jQuery('#reload');
 var loadblock = function(target,blockname,interval) {
 
 	jQuery(target).load('boxes/'+blockname);
@@ -10,18 +11,20 @@ var loadblock = function(target,blockname,interval) {
 }
 
 
-
-
 jQuery(document).ready(function(){
-
+	//reloadBtn.className = "rotate";
 	loadblock('#timecontainer','clock.php',1);
 	loadblock('#insidecontainer','inside.php',1);
 	loadblock('#chartcontainer','chart.php',10);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',120);
 
-	jQuery('#reload').click(function(){
+	reloadBtn.click(function(){
+		reloadBtn.addClass("rotate");
 		window.location.reload();
 	})
-	
+
+});
+jQuery( window ).on("load", function() {
+	reloadBtn.removeClass("rotate");
 });
