@@ -13,6 +13,7 @@ ul,li {
 }
 .left { float: left;}
 div#pagecontent {
+	position: relative;
 	width: 1024px;
 	max-width :100%;
 	height: 600px;
@@ -178,3 +179,14 @@ div#forecastcontainer ul li.icon small {
     line-height: 13px;
     text-align: center;
 }
+
+div#reload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    padding: 15px;
+    color: #777;
+}
+div#reload svg { fill: #777; }
