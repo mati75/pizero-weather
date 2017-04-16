@@ -218,7 +218,11 @@ div#reload.rotate {
   -moz-animation:spin 2s linear infinite;
   animation:spin 2s linear infinite;
 }
-div#reload svg { fill: #777; }
+div#reload svg {
+	fill: #777;
+	position: absolute;
+	top: 15px;
+}
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
