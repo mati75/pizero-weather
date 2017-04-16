@@ -27,10 +27,9 @@ jQuery(document).ready(function(){
 
 	setInterval(function(){
 		listUpcomingEvents();
-	}, 30*60000);
+	}, 120*60000);
 
 });
 jQuery(window).on("load", function() {
 	reloadBtn.removeClass("rotate");
 });
-
