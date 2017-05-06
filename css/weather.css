@@ -208,10 +208,15 @@ div#reload {
 	position: absolute;
 	top: -80px;
 	left: -80px;
-	width: 25px;
-	height: 25px;
+	width: 35px;
+	height: 35px;
 	padding: 100px;
 	color: #777;
+	cursor: pointer;
+}
+div#reload > span {
+	position: relative;
+  padding: 100px;
 }
 div#reload.rotate {
 	-webkit-animation:spin 2s linear infinite;
@@ -221,7 +226,7 @@ div#reload.rotate {
 div#reload svg {
 	fill: #777;
 	position: absolute;
-	top: 15px;
+	top: 100px;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
