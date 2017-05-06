@@ -1,4 +1,4 @@
-<h2>24h forecast</h2>
+<h2>Today's forecast</h2>
 <?php
 $city="Barona";
 $country="IT"; //Two digit country code
@@ -29,7 +29,7 @@ endif;
 }
 
 ?>
-<h2>7 day forecast</h2>
+<h2>5 day forecast</h2>
 <?php
 $json_10day=file_get_contents($url_10day);
 $data_10day=json_decode($json_10day,true);
@@ -37,7 +37,7 @@ $data_10day = $data_10day['forecast']['simpleforecast'];
 // print_r($data_10day);
 
 foreach ($data_10day['forecastday'] as $key => $day) {
-if ($key<5): ?>
+if ($key> 0 && $key<6): ?>
 	<ul class="forecast-day">
 		<li class="text left">
 			<strong><?php echo gmdate("D, j F Y", $day['date']['epoch']); ?></strong><br>
