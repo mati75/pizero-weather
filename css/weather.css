@@ -153,6 +153,11 @@ div#weathercontainer ul {
   line-height: 2rem;
 	display: inline-block;
 }
+div#forecastcontainer ul.forecast-hour {
+    width: 20%;
+    float: left;
+		margin: 0px 0 10px 0;
+}
 div#weathercontainer ul li,
 div#forecastcontainer ul li {
 	padding: 0 10px;
@@ -161,6 +166,21 @@ div#forecastcontainer ul li {
 div#weathercontainer ul li {
     width: 50%;
     float: left;
+}
+div#forecastcontainer ul.forecast-hour li.text {
+	text-align: center;
+	width: 100%;
+	padding: 0 2px;
+}
+div#forecastcontainer ul.forecast-hour span {
+	width: 100%;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0;
+	margin: 0;
+	font-size: 11px;
 }
 div#weathercontainer ul li:nth-child(even) {
     border-left: 1px dashed rgba(0, 0, 0, 0.15);
