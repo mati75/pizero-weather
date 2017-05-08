@@ -15,11 +15,11 @@ $data_hourly = $data_hourly['hourly_forecast'];
 
 foreach ($data_hourly as $key => $day) {
 //if ($key<5):
-if ($key % 4 == 1 && $key < 20):?>
+if ($key % 3 == 0 && $key < 15):?>
 	<ul class="forecast-hour">
 		<li class="text left">
-			<small><?php echo $day['FCTTIME']['hour']; ?> <?php echo $day['FCTTIME']['ampm']; ?></small><br>
-			<strong><?php echo $day['temp']['metric'] ?>&deg;</strong>
+			<strong><?php echo $day['FCTTIME']['hour']; ?> <?php echo $day['FCTTIME']['ampm']; ?></strong><br>
+			<small><?php echo $day['temp']['metric'] ?>&deg;</small>
 			<span><?php echo $day['wx'] ?></span>
 			<?php echo "<i class=\"wi wi-wu-".$day['icon']."\"></i>"; ?><small> <?php echo $day['pop']; ?>%</small>
 		</li>
