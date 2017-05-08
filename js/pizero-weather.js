@@ -9,6 +9,9 @@ var loadblock = function(target,blockname,interval) {
 		if (blockname == 'outside.php') {
 			ColorTemp('weathercontainer');
 		}
+		if (blockname == 'inside.php') {
+			ColorTemp('insidecontainer');
+		}
 	}, interval*60000);
 
 }
@@ -16,12 +19,11 @@ var loadblock = function(target,blockname,interval) {
 
 var ColorTemp = function(target) {
 	var c = document.getElementById(target);
-	var t = 30;
+	var t = $('#'+target+' .temp_value').text();
 	var x0 = (t + 30) * 5;
 	var x1 = x0 + 10;
-
 	var hue = 30 + 240 * (33 - t) / 60;
-	c.style.backgroundColor = 'hsl(' + [hue, '70%', '50%'] + ')';
+	c.style.backgroundColor = 'hsl(' + [hue, '80%', '50%'] + ')';
 }
 
 jQuery(document).ready(function(){
@@ -45,4 +47,5 @@ jQuery(document).ready(function(){
 });
 jQuery(window).on("load", function() {
 	reloadBtn.removeClass("rotate");
+	ColorTemp('weathercontainer');
 });

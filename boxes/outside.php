@@ -20,7 +20,7 @@ if ( $time['hours'] < 7 || $time['hours'] > 20 ) {
 } else {
 	$nightday='day';
 }
-echo "<time>". number_format($data['temp_c'], 1, '.', '')."&deg; <i class=\"wi wi-wu-".$data['icon']."\"></i>";
+echo "<time><span id=\"temp_outside\">". number_format($data['temp_c'], 1, '.', '')."</span>&deg; <i class=\"wi wi-wu-".$data['icon']."\"></i>";
 echo "<small>".$data['weather']."</small>";
 echo "</time>";
 echo "<ul>";
