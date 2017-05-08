@@ -5,7 +5,7 @@ $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 //$humidity = '';
 ?>
 <h3 class="temp" data-temp="<?php echo $temperature; ?>">
-	<?php echo $temperature; ?>&deg;
+	<span class="temp_value"><?php echo $temperature; ?></span>&deg;
 	<small>temperature</small>
 </h3>
 <h3 class="press" data-press="<?php echo $pressure; ?>">

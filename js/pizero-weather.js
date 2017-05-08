@@ -22,8 +22,8 @@ var ColorTemp = function(target) {
 	var t = $('#'+target+' .temp_value').text();
 	var x0 = (t + 30) * 5;
 	var x1 = x0 + 10;
-	var hue = 30 + 240 * (33 - t) / 60;
-	c.style.backgroundColor = 'hsl(' + [hue, '80%', '50%'] + ')';
+	var hue = 30 + 350 * (30 - t) / 60;
+	c.style.backgroundColor = 'hsl(' + [hue, '100%', '50%'] + ')';
 }
 
 jQuery(document).ready(function(){
@@ -48,4 +48,5 @@ jQuery(document).ready(function(){
 jQuery(window).on("load", function() {
 	reloadBtn.removeClass("rotate");
 	ColorTemp('weathercontainer');
+	ColorTemp('insidecontainer');
 });
