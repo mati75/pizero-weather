@@ -41,6 +41,14 @@ $(document).ready(function () {
 									Highcharts.numberFormat(this.y, 2);
 					}
 			},
+			plotOptions: {
+				marker: {
+          	enabled: false
+        },
+				series: {
+          color: '#FFc107'
+        }
+			},
 			legend: {
 					enabled: false
 			},
@@ -103,6 +111,14 @@ $(document).ready(function () {
 									Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
 									Highcharts.numberFormat(this.y, 2);
 					}
+			},
+			plotOptions: {
+				marker: {
+						enabled: false
+				},
+				series: {
+						color: '#5677fc'
+				}
 			},
 			legend: {
 					enabled: false
