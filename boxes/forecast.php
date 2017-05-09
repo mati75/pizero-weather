@@ -8,6 +8,7 @@ $url_hourly="http://api.wunderground.com/api/".$appid."/hourly/q/".$country."/".
 
 // example:
 // http://api.wunderground.com/api/d72cab79ae210e53/forecast10day/q/IT/Barona.json
+// http://api.wunderground.com/api/d72cab79ae210e53/hourly/q/IT/Barona.json
 
 $json_hourly=file_get_contents($url_hourly);
 $data_hourly=json_decode($json_hourly,true);
