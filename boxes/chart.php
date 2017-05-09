@@ -28,11 +28,6 @@ $(document).ready(function () {
 							text: 'Temp.'
 					},
 					tickPixelInterval: 10,
-					plotLines: [{
-							value: 0,
-							width: 1,
-							color: '#808080'
-					}]
 			},
 			tooltip: {
 					formatter: function () {
@@ -42,11 +37,12 @@ $(document).ready(function () {
 					}
 			},
 			plotOptions: {
-				marker: {
-          	enabled: false
-        },
 				series: {
-          color: '#FFc107'
+					marker: {
+							enabled: false,
+					},
+          color: '#e51c23',
+					lineWidth : 4
         }
 			},
 			legend: {
@@ -80,6 +76,7 @@ $(document).ready(function () {
 					type: 'spline',
 					animation: Highcharts.svg, // don't animate in old IE
 					marginRight: 10,
+					backgroundColor: '#ffffff',
 			},
 			title: {
 					text: ''
@@ -87,23 +84,12 @@ $(document).ready(function () {
 			xAxis: {
 					type: 'datetime',
 					tickPixelInterval: 60,
-					plotLines: [{
-							value: 0,
-							width: 1,
-							color: '#808080'
-					}]
-
 			},
 			yAxis: {
 					title: {
 							text: 'Pressure'
 					},
 					tickPixelInterval: 10,
-					plotLines: [{
-							value: 0,
-							width: 1,
-							color: '#808080'
-					}]
 			},
 			tooltip: {
 					formatter: function () {
@@ -113,11 +99,12 @@ $(document).ready(function () {
 					}
 			},
 			plotOptions: {
-				marker: {
-						enabled: false
-				},
 				series: {
-						color: '#5677fc'
+						marker: {
+								enabled: false,
+						},
+						color: '#5677fc',
+						lineWidth : 4
 				}
 			},
 			legend: {
