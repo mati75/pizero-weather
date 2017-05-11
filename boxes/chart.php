@@ -1,7 +1,18 @@
-<h2>Temperature</h2>
+<h2>Inside Temp.</h2>
 <div id="chart_temp" style="height:110px"></div>
 <h2>Pressure</h2>
 <div id="chart_press" style="height:110px"></div>
+<?php
+$temperature = `gpio -x bmp180:100 aread 100` / 10 ;
+$pressure = `gpio -x bmp180:100 aread 101` / 10 ;
+//$humidity = '';
+?>
+<h3 class="temp" data-temp="<?php echo $temperature; ?>">
+	<?php echo $temperature; ?>&deg;
+</h3>
+<h3 class="press" data-press="<?php echo $pressure; ?>">
+	<?php echo $pressure; ?>mbar
+</h3>
 <script>
 $(document).ready(function () {
 	Highcharts.setOptions({

@@ -90,54 +90,77 @@ div#timecontainer p {
 }
 
 
-div#insidecontainer {
-    background: #FFC107;
-		color: #000;
+div#newscontainer {
+	background: #E0E0E0;
+	color: #424242;
+	height: 261px;
+	overflow: hidden;
 }
-div#insidecontainer h3 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    text-align: center;
-    margin: 8px 5%;
-    padding: 1px 0 20px 0;
-    display: inline-block;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-    width: 90%;
-    box-sizing: border-box;
+div#newscontainer ul {
+	margin: 0;
 }
-div#insidecontainer h3.temp {
-    font-size: 3.5rem;
+div#newscontainer li {
+	padding: 0px 10px 0.5rem 10px;
+	line-height: 1rem;
+	font-size: .875rem;
 }
-div#insidecontainer h3:last-child {
-    border-bottom: none;
-}
-div#insidecontainer small {
-	display: block;
-	clear: both;
-	font-size: 1.15rem;
-}
-
 
 div#chartcontainer {
     background: #fff;
     height: 300px;
+		position: relative;
 }
-
+#chart_temp,
+#chart_press {opacity: .5;}
+div#chartcontainer h3.temp {
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	left: 50%;
+	font-size: 3.25rem;
+	font-weight: 400;
+	transform: translateX(-50%);
+}
+div#chartcontainer h3.press {
+	position: absolute;
+	top: 150px;
+	z-index: 0;
+	left: 50%;
+	font-size: 3.25rem;
+	font-weight: 400;
+	transform: translateX(-50%);
+}
 
 div#weathercontainer {
-    background: #FFC107;
-		color: #000;
+  background: #FFC107;
+	color: #000;
+	height: 265px;
+  overflow: hidden;
 }
+div#weathercontainer .alerts {
+  padding: 5px 10px;
+  margin: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.938rem;
+  line-height: 0.938rem;
+  height: calc(4 * 0.938rem);
+  display: flex;
+  align-items: center;
+}
+div#weathercontainer .alerts p { margin: 0; }
+div#weathercontainer .alerts.level_1 { background-color: #b2ff59; }
+div#weathercontainer .alerts.level_2 { background-color: #ffeb3b; }
+div#weathercontainer .alerts.level_3 { background-color: #e51c23; }
 
 div#forecastcontainer {
-    background: #00bcd4;
-		color: #000;
-		height: 580px;
+  background: #00bcd4;
+	color: #000;
+	height: 580px;
 }
 time {
 	text-align: center;
 	display: block;
-	font-size: 2.75rem;
+	font-size: 3rem;
 	line-height: 2rem;
 	padding-bottom: 0px;
 	margin-top: 10px;
@@ -145,12 +168,13 @@ time {
 time i { margin-left: 20px; }
 time small {
 	display: block;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 }
 div#weathercontainer ul {
   font-size: 1.15rem;
   line-height: 2rem;
+	margin: 0;
 	display: inline-block;
 }
 div#forecastcontainer ul.forecast-hour {

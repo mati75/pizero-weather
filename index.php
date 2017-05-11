@@ -14,13 +14,13 @@
 				<div id="timecontainer"></div>
 				<div id="gcaldata"><?php include('js/quickstart.php') ?></div>
 
-				<div id="weathercontainer"></div>
+				<div id="newscontainer"></div>
 
 			</div>
 
 			<div class="col col2 width33 left">
 
-				<div id="insidecontainer"></div>
+				<div id="weathercontainer"></div>
 
 				<div id="chartcontainer"></div>
 

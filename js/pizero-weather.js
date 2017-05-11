@@ -9,9 +9,6 @@ var loadblock = function(target,blockname,interval) {
 		if (blockname == 'outside.php') {
 			ColorTemp('weathercontainer');
 		}
-		if (blockname == 'inside.php') {
-			ColorTemp('insidecontainer');
-		}
 	}, interval*60000);
 
 }
@@ -29,8 +26,8 @@ var ColorTemp = function(target) {
 jQuery(document).ready(function(){
 	//reloadBtn.className = "rotate";
 	loadblock('#timecontainer','clock.php',1);
-	loadblock('#insidecontainer','inside.php',1);
-	loadblock('#chartcontainer','chart.php',10);
+	loadblock('#newscontainer','news.php',30);
+	loadblock('#chartcontainer','chart.php',30);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
 
@@ -48,5 +45,4 @@ jQuery(document).ready(function(){
 jQuery(window).on("load", function() {
 	reloadBtn.removeClass("rotate");
 	ColorTemp('weathercontainer');
-	ColorTemp('insidecontainer');
 });

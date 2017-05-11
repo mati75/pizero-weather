@@ -1,4 +1,4 @@
-<h2>Today's forecast</h2>
+<h2>12 hrs forecast</h2>
 <?php
 $city="Barona";
 $country="IT"; //Two digit country code
