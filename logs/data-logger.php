@@ -1,5 +1,5 @@
 <?php // logs temperature & pressure to file: runs every hour via cron
-$temperature = `gpio -x bmp180:100 aread 100` / 10 ;
+$temperature = (`gpio -x bmp180:100 aread 100` / 10) - 2 ;
 $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 $timestamp = time()*1000;
 $file_temp = '/var/www/html/pizero-weather/logs/temp_log.json';
