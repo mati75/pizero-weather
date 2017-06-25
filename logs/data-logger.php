@@ -1,5 +1,6 @@
 <?php // logs temperature & pressure to file: runs every hour via cron
-$temperature = (`gpio -x bmp180:100 aread 100` / 10) - 2 ;
+$temperature = `gpio -x bmp180:100 aread 100` / 10 ;
+$temperature = $temperature - 2;
 $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 $timestamp = time()*1000;
 $file_temp = '/var/www/html/pizero-weather/logs/temp_log.json';
@@ -18,10 +19,7 @@ $ArrT = explode("\n", $current_temp);
 $ArrT = array_slice($ArrT, -30);
 //var_dump($ArrT);
 $dataT=implode("\n",$ArrT);
-// remove last ,
-// $search = ',';
-// $replace = '';
-// $dataT = strrev(implode(strrev($replace), explode(strrev($search), strrev($dataT), 2)));
+
 // re-write data to file
 file_put_contents($file_temp, $dataT);
 echo '<pre>';
@@ -43,10 +41,7 @@ $ArrP = explode("\n", $current_press);
 $ArrP = array_slice($ArrP, -30);
 //var_dump($ArrP);
 $dataP=implode("\n",$ArrP);
-// remove last ,
-// $search = ',';
-// $replace = '';
-// $dataP = strrev(implode(strrev($replace), explode(strrev($search), strrev($dataP), 2)));
+
 // re-write data to file
 file_put_contents($file_press, $dataP);
 echo '<pre>';
