@@ -32,13 +32,13 @@ $(document).ready(function () {
 			},
 			xAxis: {
 					type: 'datetime',
-					tickPixelInterval: 60
+					tickPixelInterval: 60,
 			},
 			yAxis: {
 					title: {
-							text: 'Temp.'
+							text: 'Inside Temp.',
 					},
-					tickPixelInterval: 10,
+					tickPixelInterval: 10
 			},
 			tooltip: {
 					formatter: function () {
