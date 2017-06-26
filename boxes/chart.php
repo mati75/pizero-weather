@@ -33,6 +33,9 @@ $(document).ready(function () {
 			xAxis: {
 					type: 'datetime',
 					tickPixelInterval: 60,
+					dateTimeLabelFormats: {
+            day: '%e %b'
+        }
 			},
 			yAxis: {
 					title: {
