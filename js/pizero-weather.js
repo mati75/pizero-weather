@@ -27,7 +27,7 @@ jQuery(document).ready(function(){
 	//reloadBtn.className = "rotate";
 	loadblock('#timecontainer','clock.php',1);
 	loadblock('#newscontainer','news.php',30);
-	loadblock('#chartcontainer','chart.php',30);
+	loadblock('#chartcontainer','chart.php',3);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
 

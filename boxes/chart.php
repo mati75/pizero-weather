@@ -4,6 +4,7 @@
 <div id="chart_press" style="height:110px"></div>
 <?php
 $temperature = `gpio -x bmp180:100 aread 100` / 10 ;
+$temperature = $temperature - 2;
 $pressure = `gpio -x bmp180:100 aread 101` / 10 ;
 //$humidity = '';
 ?>
