@@ -1,4 +1,5 @@
 var reloadBtn = jQuery('#reload');
+var currenthour = jQuery('#timecontainer h2 span').text();
 var loadblock = function(target,blockname,interval) {
 
 	jQuery(target).load('boxes/'+blockname);
@@ -6,6 +7,11 @@ var loadblock = function(target,blockname,interval) {
 	setInterval(function(){
 		jQuery(target).load('boxes/'+blockname);
 		console.debug('block '+blockname+' loaded.');
+		if (currenthour < 7 || currenthour > 23) {
+			$('body').addClass('dimmed')
+		} else {
+			$('body').removeClass('dimmed')
+		}
 		if (blockname == 'outside.php') {
 			ColorTemp('weathercontainer');
 		}
@@ -27,7 +33,7 @@ jQuery(document).ready(function(){
 	//reloadBtn.className = "rotate";
 	loadblock('#timecontainer','clock.php',1);
 	loadblock('#newscontainer','news.php',30);
-	loadblock('#chartcontainer','chart.php',3);
+	loadblock('#chartcontainer','chart.php',15);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
 
