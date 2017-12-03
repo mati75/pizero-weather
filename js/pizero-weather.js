@@ -1,10 +1,11 @@
 var reloadBtn = jQuery('#reload');
-var currenthour = jQuery('#timecontainer h2 span').text();
+var currenthour = '';
 var loadblock = function(target,blockname,interval) {
 
 	jQuery(target).load('boxes/'+blockname);
 
 	setInterval(function(){
+		currenthour = jQuery('#timecontainer h2 span').text();
 		jQuery(target).load('boxes/'+blockname);
 		console.debug('block '+blockname+' loaded.');
 		if (currenthour < 7 || currenthour > 23) {
