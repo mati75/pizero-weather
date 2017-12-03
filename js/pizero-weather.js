@@ -20,8 +20,18 @@ var loadblock = function(target,blockname,interval) {
 
 }
 
-var checkPS4 = function(reply) {
-	$('#checkPS4').load("boxes/check_ip.php #response");
+var checkPS4 = function(ip) {
+	$('#checkPS4').load("boxes/check_ip.php?ip="+ip+" #response");
+	setTimeout(function(){
+		if ($('#response').text() == 'online'){
+			$('#pagecontent').prepend("<div id=\"gtsportraces\"><iframe src=\"http://gtsportraces.com\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe></div>");
+			//$('#gtsportraces').load("http://gtsportraces.com #main-content");
+		} else {
+			$('#gtsportraces').remove();
+		}
+	}, 2000);
+
+
 }
 
 var ColorTemp = function(target) {
@@ -50,6 +60,10 @@ jQuery(document).ready(function(){
 	setInterval(function(){
 		listUpcomingEvents();
 	}, 120*60000);
+	
+	setInterval(function(){
+		checkPS4('192.168.1.111');
+	}, 5*60000);
 
 });
 jQuery(window).on("load", function() {
