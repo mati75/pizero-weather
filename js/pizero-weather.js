@@ -20,6 +20,9 @@ var loadblock = function(target,blockname,interval) {
 
 }
 
+var checkPS4 = function(reply) {
+	$('#checkPS4').load("boxes/check_ip.php #response");
+}
 
 var ColorTemp = function(target) {
 	var c = document.getElementById(target);
