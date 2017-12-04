@@ -9,6 +9,8 @@
 	</head>
   <body>
 		<div id="pagecontent">
+			<div id="gtsportraces" class="hidden"></div>
+
 			<div class="col col1 width33 left">
 
 				<div id="timecontainer"></div>
@@ -37,10 +39,10 @@
 			</div>
 
 		</div>
-		<div id="checkPS4"></div>
+		<div id="checkPS4" class="hidden"></div>
 		<script src="js/jquery-3.2.0.min.js"></script>
 		<script src="https://code.highcharts.com/highcharts.src.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="js/pizero-weather.js"></script>
+		<script src="js/pizero-weather.js?<?php echo rand(); ?>"></script>
 	</body>
 </html>
