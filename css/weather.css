@@ -11,6 +11,7 @@ ul,li {
 	padding: 0;
 }
 .left { float: left;}
+.hidden {display:none;}
 div#pagecontent {
 	position: relative;
 	width: 1024px;
@@ -278,3 +279,5 @@ div#reload svg {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#gtsportraces iframe {border:none;}
