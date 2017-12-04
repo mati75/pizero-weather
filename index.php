@@ -5,7 +5,7 @@
 		<title>Pizero Display Panel</title>
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,700" rel="stylesheet">
 		<link href="css/weather-icons.min.css" rel="stylesheet" type="text/css">
-		<link href="css/weather.css?<?php echo rand(); ?>" rel="stylesheet" type="text/css">
+		<link href="css/weather.css?cb=<?php echo rand(); ?>" rel="stylesheet" type="text/css">
 	</head>
   <body>
 		<div id="pagecontent">
@@ -43,6 +43,6 @@
 		<script src="js/jquery-3.2.0.min.js"></script>
 		<script src="https://code.highcharts.com/highcharts.src.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="js/pizero-weather.js?<?php echo rand(); ?>"></script>
+		<script src="js/pizero-weather.js?cb=<?php echo rand(); ?>"></script>
 	</body>
 </html>
