@@ -24,11 +24,17 @@ var checkPS4 = function(ip) {
 	$('#checkPS4').load("boxes/check_ip.php?ip="+ip+" #response");
 	var gtsportracesDiv = $('#gtsportraces');
 	setTimeout(function(){
-		if ($('#response').is(':empty') == 'online'){
+		if ($('#response').text() == 'online'){
+			//console.log('PS4 is turned ON');
 			if (gtsportracesDiv.is(':empty') == true){
+				//console.log(gtsportracesDiv+' is empty');
 				gtsportracesDiv.prepend("<iframe src=\"http://gtsportraces.com\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe>");
+				gtsportracesDiv.removeClass('hidden');
+			} else {
+				//console.log(gtsportracesDiv+' is NOT empty');
 			}
 		} else {
+			//console.log('PS4 is turned OFF');
 			gtsportracesDiv.find('iframe').remove();
 			gtsportracesDiv.addClass('hidden');
 		}
