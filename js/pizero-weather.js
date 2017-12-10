@@ -49,7 +49,7 @@ var ColorTemp = function(target) {
 	var x0 = (t + 30) * 5;
 	var x1 = x0 + 10;
 	var hue = 30 + 350 * (30 - t) / 60;
-	c.style.backgroundColor = 'hsl(' + [hue, '100%', '50%'] + ')';
+	c.style.backgroundColor = 'hsla(' + [hue, '100%', '50%'] + ',0.25)';
 }
 
 jQuery(document).ready(function(){
@@ -59,6 +59,8 @@ jQuery(document).ready(function(){
 	loadblock('#chartcontainer','chart.php',15);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
+	loadblock('#bgcontainer','grab_bg.php',24*60);
+
 
 	reloadBtn.click(function(){
 		reloadBtn.addClass("rotate");

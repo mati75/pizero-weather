@@ -11,6 +11,7 @@ ul,li {
 	padding: 0;
 }
 .left { float: left;}
+.right { float: right;}
 .hidden {display:none;}
 div#pagecontent {
 	position: relative;
@@ -18,14 +19,29 @@ div#pagecontent {
 	max-width :100%;
 	height: 600px;
 	margin: 0 auto;
-	background: #333;
 	padding: 0 5px;
 	box-sizing: border-box;
 	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #333;
 }
 .dimmed #pagecontent {opacity:0.5}
+div.col.width25 {
+	width: 25%;
+	margin: 10px 0;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
 div.col.width33 {
 	width: 33.33333%;
+	margin: 10px 0;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+div.col.width66 {
+	width: 66.66666%;
 	margin: 10px 0;
 	padding: 0 5px;
 	box-sizing: border-box;
@@ -37,7 +53,7 @@ div.col > div {
 	width: 100%;
 }
 h2 {
-    color: #333;
+    color: #fff;
     font-weight: 100;
     text-align: center;
     margin: 0;
@@ -49,28 +65,39 @@ h2 {
     width: 100%;
 }
 
+div#timecontainer,
+div#gcaldata,
+div#newscontainer,
+div#weathercontainer,
+div#chartcontainer,
+div#forecastcontainer {
+	background: rgba(0, 0, 0, 0.25);
+	color: #bbb;
+}
+
 div#timecontainer {
-    background: #333;
-		color: #fff;
-		height: 150px;
+	background: rgba(0, 0, 0, 0.66);
+	height: 150px;
 }
 div#timecontainer h2 {
 	color: #fff;
-	font-size: 5rem;
-	margin: 25px 0 0 0;
+	font-size: 5.5rem;
+	margin: 10px 0 0 0;
 	padding: 0;
 }
 div#timecontainer p {
 	text-align: center;
-  font-size: 1.5rem;
-	margin: 0 0 25px 0;
+  font-size: 1.25rem;
+	margin: -5px 0 25px 0;
 }
 
 #gcaldata  {
 	margin: 10px auto 20px;
 	height: 128px;
 	width: 100%;
-	color: #fff;
+	background: transparent;
+	padding: 10px;
+	box-sizing: border-box;
 }
 #gcaldata h5 {
     margin: 5px auto;
@@ -78,7 +105,7 @@ div#timecontainer p {
     text-transform: uppercase;
 }
 #gcaldata li {
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(0, 0, 0, 0.66);
 	border-radius: 2px;
 	margin: 7px 0;
 	padding: 4px 10px;
@@ -92,12 +119,10 @@ div#timecontainer p {
 
 
 div#newscontainer {
-	background-color: transparent;
-	color: #fff;
+	background:transparent;
 	height: 261px;
 	overflow: hidden;
 }
-div#newscontainer h2 { color: #fff; }
 div#newscontainer ul {
 	margin: 0;
 	font-family: Georgia, serif;
@@ -107,11 +132,16 @@ div#newscontainer li {
 	line-height: 1rem;
 	font-size: .875rem;
 }
+div#newscontainer li span {
+  display: inline;
+  background: rgba(255, 255, 0, 0.5);
+  color: #000;
+}
 
 div#chartcontainer {
-    background: #fff;
-    height: 300px;
-		position: relative;
+  height: 300px;
+	position: relative;
+	color: #fff;
 }
 #chart_temp,
 #chart_press {opacity: .5;}
@@ -134,12 +164,14 @@ div#chartcontainer h3.press {
 	transform: translateX(-50%);
 }
 div#chartcontainer h3.press small { font-size: 1.25rem; }
-
+div#chartcontainer rect.highcharts-background { fill:transparent; }
+div#chartcontainer .highcharts-axis-labels text,
+div#chartcontainer .highcharts-axis text { fill: #bbb!important; color: #bbb!important; }
+div#chartcontainer .highcharts-axis.highcharts-yaxis { display: none; }
 div#weathercontainer {
-  background: #FFC107;
-	color: #000;
 	height: 265px;
   overflow: hidden;
+	color: #fff;
 }
 div#weathercontainer .alerts {
   padding: 5px 10px;
@@ -152,13 +184,11 @@ div#weathercontainer .alerts {
   align-items: center;
 }
 div#weathercontainer .alerts p { margin: 0; }
-div#weathercontainer .alerts.level_1 { background-color: rgba(178, 255, 89, 0.75); }
-div#weathercontainer .alerts.level_2 { background-color: rgba(255, 235, 59, 0.75); }
-div#weathercontainer .alerts.level_3 { background-color: rgba(229, 28, 35, 0.75); }
+div#weathercontainer .alerts.level_1 { background-color: rgba(178, 255, 89, 0.5); }
+div#weathercontainer .alerts.level_2 { background-color: rgba(255, 235, 59, 0.5); }
+div#weathercontainer .alerts.level_3 { background-color: rgba(229, 28, 35, 0.5); }
 
 div#forecastcontainer {
-  background: #00bcd4;
-	color: #000;
 	height: 580px;
 }
 time {

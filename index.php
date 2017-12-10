@@ -9,9 +9,10 @@
 	</head>
   <body>
 		<div id="pagecontent">
+			<div id="bgcontainer" class="hidden"></div>
 			<div id="gtsportraces" class="hidden"></div>
 
-			<div class="col col1 width33 left">
+			<div class="col col1 width25 left">
 
 				<div id="timecontainer"></div>
 				<div id="gcaldata"><?php include('js/quickstart.php') ?></div>
@@ -28,7 +29,7 @@
 
 			</div>
 
-			<div class="col col2 width33 left">
+			<div class="col col2 width25 right">
 
 				<div id="forecastcontainer"></div>
 

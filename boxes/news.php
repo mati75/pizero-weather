@@ -9,8 +9,8 @@ $news_item = $xml->channel->item;
 echo "<ul>";
 $i = 1;
 foreach ($news_item as $news) {
-	if ($i <= 5) :
-		echo '<li>'.$news->title.'</li>';
+	if ($i <= 4) :
+		echo '<li><span>'.$news->title.'</span></li>';
 		$i++;
 	endif;
 }
