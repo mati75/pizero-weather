@@ -3,17 +3,25 @@
 
 $url = 'http://miniature-calendar.com/feed';
 
-    $rss = new DOMDocument();
-    $rss->load($url);
-    $feed = array();
-		$node = $rss->getElementsByTagName('item')[0];
-    $item = $node->getElementsByTagName('encoded')->item(0)->nodeValue;
+if(!isset($_SESSION['first_run']) || $_SESSION['first_run'] == 0) {
+	$_SESSION['first_run'] = 1;
+  $rss = new DOMDocument();
+  $rss->load($url);
+  $feed = array();
+	$node = $rss->getElementsByTagName('item')[0];
+  $item = $node->getElementsByTagName('encoded')->item(0)->nodeValue;
 
-		//print_r($item);
-		$xpath = new DOMXPath(@DOMDocument::loadHTML($item));
-		$bgfullurl = str_replace('-250x250','',$xpath->evaluate("string(//img/@src)"));
-		//print_r($bgfullurl);
+	//print_r($item);
+	$xpath = new DOMXPath(@DOMDocument::loadHTML($item));
+	$bgfullurl = str_replace('-250x250','',$xpath->evaluate("string(//img/@src)"));
+	//print_r($bgfullurl);
+
+	$time = getdate();
+	if ( $time['hours'] == 0 ) { $_SESSION['first_run'] = 0; }
 ?>
-<script>
-	document.getElementById('pagecontent').setAttribute("style", "background-image: url('<?php echo $bgfullurl ?>');");
-</script>
+	<script>
+		document.getElementById('pagecontent').setAttribute("style", "background-image: url('<?php echo $bgfullurl ?>');");
+	</script>
+<?php
+}
+?>

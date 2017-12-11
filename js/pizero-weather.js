@@ -59,7 +59,7 @@ jQuery(document).ready(function(){
 	loadblock('#chartcontainer','chart.php',15);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
-	loadblock('#bgcontainer','grab_bg.php',24*60);
+	loadblock('#bgcontainer','grab_bg.php',60);
 
 
 	reloadBtn.click(function(){
