@@ -49,7 +49,7 @@ var ColorTemp = function(target) {
 	var x0 = (t + 30) * 5;
 	var x1 = x0 + 10;
 	var hue = 30 + 350 * (30 - t) / 60;
-	c.style.backgroundColor = 'hsla(' + [hue, '100%', '50%'] + ',0.25)';
+	c.style.backgroundColor = 'hsla(' + [hue, '100%', '50%'] + ',0.95)';
 }
 
 jQuery(document).ready(function(){

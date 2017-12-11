@@ -1,7 +1,7 @@
 <h2>Inside Temp.</h2>
-<div id="chart_temp" style="height:110px"></div>
+<div id="chart_temp" style="height:100px"></div>
 <h2>Pressure</h2>
-<div id="chart_press" style="height:110px"></div>
+<div id="chart_press" style="height:100px"></div>
 <?php
 $temperature = `gpio -x bmp180:100 aread 100` / 10 ;
 $temperature = $temperature - 2;
@@ -40,7 +40,7 @@ $(document).ready(function () {
 			},
 			yAxis: {
 					title: {
-							text: 'Inside Temp.',
+							text: '',
 					},
 					tickPixelInterval: 10
 			},
@@ -70,7 +70,7 @@ $(document).ready(function () {
 					name: 'Temperature',
 					data: (function () {
 						var data = [];
-						data.push(<?php echo file_get_contents('/var/www/html/pizero-weather/logs/temp_log.json'); ?>)
+						data.push(<?php echo file_get_contents('../logs/temp_log.json'); ?>)
 						return data;
 					}())
 			}]
@@ -105,7 +105,7 @@ $(document).ready(function () {
 			},
 			yAxis: {
 					title: {
-							text: 'Pressure'
+							text: ''
 					},
 					tickPixelInterval: 10,
 			},
@@ -135,7 +135,7 @@ $(document).ready(function () {
 					name: 'Pressure',
 					data: (function () {
 						var data = [];
-						data.push(<?php echo file_get_contents('/var/www/html/pizero-weather/logs/press_log.json'); ?>)
+						data.push(<?php echo file_get_contents('../logs/press_log.json'); ?>)
 						return data;
 					}())
 			}]
