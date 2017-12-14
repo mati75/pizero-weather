@@ -23,6 +23,7 @@ var loadblock = function(target,blockname,interval) {
 var checkPS4 = function(ip) {
 	$('#checkPS4').load("boxes/check_ip.php?ip="+ip+" #response");
 	var gtsportracesDiv = $('#gtsportraces');
+	var timecontainerDiv = $('#timecontainer');
 	setTimeout(function(){
 		if ($('#response').text() == 'online'){
 			//console.log('PS4 is turned ON');
@@ -30,6 +31,7 @@ var checkPS4 = function(ip) {
 				//console.log(gtsportracesDiv+' is empty');
 				gtsportracesDiv.prepend("<iframe src=\"http://gtsportraces.com\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe>");
 				gtsportracesDiv.removeClass('hidden');
+				timecontainerDiv.addClass('gtsportraces');
 			} else {
 				//console.log(gtsportracesDiv+' is NOT empty');
 			}
@@ -37,6 +39,7 @@ var checkPS4 = function(ip) {
 			//console.log('PS4 is turned OFF');
 			gtsportracesDiv.find('iframe').remove();
 			gtsportracesDiv.addClass('hidden');
+			timecontainerDiv.removeClass('gtsportraces');
 		}
 	}, 5000);
 
@@ -59,7 +62,7 @@ jQuery(document).ready(function(){
 	loadblock('#chartcontainer','chart.php',15);
 	loadblock('#weathercontainer','outside.php',30);
 	loadblock('#forecastcontainer','forecast.php',60);
-	loadblock('#bgcontainer','grab_bg.php',60);
+	loadblock('#bgcontainer','grab_bg.php',240);
 
 
 	reloadBtn.click(function(){
