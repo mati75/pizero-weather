@@ -17,5 +17,6 @@ It is possible to switch source for the forecasts (weather underground / openwea
 ### Software
 * lighttpd w/ php
 * midori browser
-* Highcharts js to graph data
 * php cronjob to gather and store data from sensors
+* [Highcharts js](http://www.highcharts.com/) to graph data
+* [Weather Icons](https://erikflowers.github.io/weather-icons/)
