@@ -349,21 +349,22 @@ div#gtsportraces {
 
 div#timecontainer.gtsportraces {
 	height: 110px;
-	width: 260px;
-	right: 225px;
+	width: 320px;
+	left: 50%;
 	position: absolute;
-	top: 8px;
+	top: -10px;
+	transform: translateX(-50%);
 	z-index: 100;
-	background: rgba(183, 29, 28, 0.25);
-	zoom: 0.4;
-	border: 2px solid #b71c1c;
+	zoom: 0.5;
 	border-radius: 5px;
+	overflow: hidden;
 }
 div#timecontainer.gtsportraces h2 {
-    margin: 0;
-    font-size: 6.5rem;
-    -webkit-margin-before: -10px;
-    -webkit-margin-after: 0;
+	margin: 0;
+	font-size: 6.5rem;
+	-webkit-margin-before: -5px;
+	background: #fff;
+	color: #1b1b1b;
 }
 div#timecontainer.gtsportraces p {
   display: none;
