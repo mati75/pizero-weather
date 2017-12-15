@@ -363,8 +363,8 @@ div#timecontainer.gtsportraces h2 {
 	margin: 0;
 	font-size: 6.5rem;
 	-webkit-margin-before: -5px;
-	background: #fff;
-	color: #1b1b1b;
+	background: #EEEEEE;
+	color: #212121;
 }
 div#timecontainer.gtsportraces p {
   display: none;
