@@ -22,7 +22,7 @@ if(!isset($_SESSION['first_run']) || $_SESSION['first_run'] == 0) {
 		$_SESSION['first_run'] = 0;
 	  $rss = simplexml_load_file($url2);
 		//print_r($rss);
-	  $rss = $rss->Contents[rand(1,20)];
+	  $rss = $rss->Contents[rand(1,150)];
 
 		//print_r($rss);
 		$bgfullurl = $url2.'/'.$rss->Key[0];
