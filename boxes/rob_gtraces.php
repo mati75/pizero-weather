@@ -6,6 +6,81 @@ foreach ($doc->getElementsByTagName('section') as $node) {
 		$gtsportraces_html = $doc->saveHtml($node);
 }
 
+
+
+function httpPost($url,$params)
+{
+  $postData = '';
+   //create name value pairs seperated by &
+   foreach($params as $k => $v)
+   {
+      $postData .= $k . '='.$v.'&';
+   }
+   $postData = rtrim($postData, '&');
+
+    $ch = curl_init();
+
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($ch,CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_POST, count($postData));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+
+    $output=curl_exec($ch);
+
+    curl_close($ch);
+    return $output;
+
+}
+$params = array(
+   "job" => "3",
+   "user_no" => "2251088"
+);
+
+$profiledata = httpPost("https://www.gran-turismo.com/us/api/gt7sp/profile/",$params);
+$GTapi = json_decode($profiledata);
+
+//print_r($GTapi->stats);
+
+switch ($GTapi->stats->driver_class) {
+		case "1":
+			$DR= "E";
+			break;
+		case "2":
+			$DR= "D";
+			break;
+		case "3":
+			$DR= "C";
+			break;
+		case "4":
+			$DR= "B";
+			break;
+		case "5":
+			$DR= "A";
+			break;
+		case "6":
+			$DR= "S";
+			break;
+		default:
+			echo "N/A";
+}
+
+if($GTapi->stats->manner_point < 10) {
+	$SR = "E";
+} elseif($GTapi->stats->manner_point < 20) {
+	$SR = "D";
+} elseif($GTapi->stats->manner_point < 40) {
+	$SR = "C";
+} elseif($GTapi->stats->manner_point < 65) {
+	$SR = "B";
+} elseif($GTapi->stats->manner_point < 80) {
+	$SR = "A";
+} elseif($GTapi->stats->manner_point < 100) {
+	$SR = "S";
+} else {
+	$SR = "N/A";
+}
+
 /*
 $doc2 = new DOMDocument('1.0', 'UTF-8');
 $doc2->loadHTMLFile ('https://www.kudosprime.com/gts/stats.php?profile=2251088');
@@ -65,6 +140,7 @@ foreach ($xpath->evaluate($expression) as $div) {
 		@media (max-width: 1200px){
 		.carClass h2{font-size:44px;}
 		}
+		/* this is mine! */
 		div#robcontainer {
     width: 100%;
     max-width: 960px;
@@ -73,11 +149,61 @@ foreach ($xpath->evaluate($expression) as $div) {
 		top: 50%;
 		transform: translateY(-50%);
 		}
+		.track-image { height: 215px; }
+		.carClass h2 {margin: 100px 0 0;}
+
+		div#statscontainer {
+			width: 100%;
+			max-width: 400px;
+			margin: 10px auto;
+		}
+		div#statscontainer h2 {
+    font-size: 18px;
+    background-color: rgba(51,51,51,.75);
+    padding: 5px 11px;
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+		}
+		div#statscontainer ul {
+		width: 400px;
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: auto;
+		padding: 0px 100px 10px 10px;
+		list-style-type: none;
+		float: left;
+		font-size: 16px;
+		font-weight: 700;
+		background-color: rgba(51, 51, 51, 0.33);
+		color: #fff;
+		border: 1px solid #333;
+		border-radius: 0 0 2px 2px;
+		}
+		div#statscontainer ul li {
+			width:50%;
+			float: left;
+		}
 		</style>
 </head>
 <body>
 	<div id="robcontainer">
 		<?php echo $gtsportraces_html; ?>
+
+		<div id="statscontainer">
+			<h2>Meuro078</h2>
+			<ul style="background-image:url('https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg')">
+				<li>Race count:</li><li><?php echo $GTapi->stats->race_count; ?></li>
+				<li>DR</li><li><?php echo $DR; ?> (<?php echo $GTapi->stats->driver_point; ?> pts.)</li>
+				<li>SR</li><li><?php echo $SR; ?> (<?php echo $GTapi->stats->manner_point; ?> / 99)</li>
+		</div>
+		<!-- es.
+		[driver_class] => 4
+		[driver_point] => 15483
+		[manner_point] => 69
+		[race_count] => 212
+		[driver_point_up_rate] => 27  ???
+		-->
+
 	</div>
 </body>
 </html>
