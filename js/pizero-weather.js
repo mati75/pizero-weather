@@ -29,7 +29,8 @@ var checkPS4 = function(ip) {
 			//console.log('PS4 is turned ON');
 			if (gtsportracesDiv.is(':empty') == true){
 				//console.log(gtsportracesDiv+' is empty');
-				gtsportracesDiv.prepend("<iframe src=\"http://gtsportraces.com\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe>");
+				//gtsportracesDiv.prepend("<iframe src=\"http://gtsportraces.com\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe>");
+				gtsportracesDiv.prepend("<iframe src=\"boxes/rob_gtraces.php\" width=\"100%\" height=\"600\" scrolling=\"no\" border=\"0\"></iframe>");
 				gtsportracesDiv.removeClass('hidden');
 				timecontainerDiv.addClass('gtsportraces');
 			} else {
