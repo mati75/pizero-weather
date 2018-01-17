@@ -81,18 +81,7 @@ if($GTapi->stats->manner_point < 10) {
 	$SR = "N/A";
 }
 
-/*
-$doc2 = new DOMDocument('1.0', 'UTF-8');
-$doc2->loadHTMLFile ('https://www.kudosprime.com/gts/stats.php?profile=2251088');
-$xpath = new DOMXpath($doc2);
 
-$expression = './/div[contains(concat(" ", normalize-space(@class), " "), " stat_entry ")]';
-foreach ($xpath->evaluate($expression) as $div) {
-		$kudosprime_html = $doc2->saveHtml($div);
-}
-*/
-
-//echo $kudosprime_html;
 ?>
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en-gb"
       lang="en-gb" itemscope itemtype="http://schema.org/Article">
@@ -193,8 +182,8 @@ foreach ($xpath->evaluate($expression) as $div) {
 			<h2>Meuro078</h2>
 			<ul style="background-image:url('https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg')">
 				<li>Race count:</li><li><?php echo $GTapi->stats->race_count; ?></li>
-				<li>DR</li><li><?php echo $DR; ?> (<?php echo $GTapi->stats->driver_point; ?> pts.)</li>
-				<li>SR</li><li><?php echo $SR; ?> (<?php echo $GTapi->stats->manner_point; ?> / 99)</li>
+				<li>DR</li><li><?php echo $DR; ?> ( <?php echo $GTapi->stats->driver_point; ?> pts. )</li>
+				<li>SR</li><li><?php echo $SR; ?> ( <?php echo $GTapi->stats->manner_point; ?>/99 )</li>
 		</div>
 		<!-- es.
 		[driver_class] => 4
