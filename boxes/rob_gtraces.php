@@ -96,24 +96,39 @@ if($GTapi->stats->manner_point < 10) {
 		<script src="http://localhost/pizero-weather/js/gtraces.js"></script>
 </head>
 <body>
-	<div id="robcontainer">
-		<?php echo $gtsportraces_html; ?>
+	<div id="pagecontent">
+		<div id="robcontainer">
 
-		<div id="statscontainer">
-			<h2>Stats for: Meuro078</h2>
-			<ul style="background-image:url('https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg')">
-				<li>Race count:</li><li><?php echo $GTapi->stats->race_count; ?></li>
-				<li>DR</li><li><?php echo $DR; ?> ( <?php echo $GTapi->stats->driver_point; ?> pts. )</li>
-				<li>SR</li><li><?php echo $SR; ?> ( <?php echo $GTapi->stats->manner_point; ?>/99 )</li>
+			<?php echo $gtsportraces_html; ?>
+
+			<section class="stats row">
+
+				<div class="infopanel col-4">
+					<ul class="race">
+						<li class="infopanel-header"><img src="https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg" width="75" height="75" /><h2>Stats for: Meuro078</h2></li>
+						<li>Race count:</li><li><?php echo $GTapi->stats->race_count; ?></li>
+						<li>DR</li><li><?php echo $DR; ?> ( <?php echo $GTapi->stats->driver_point; ?> pts. )</li>
+						<li>SR</li><li><?php echo $SR; ?> ( <?php echo $GTapi->stats->manner_point; ?>/99 )</li>
+					</ul>
+				</div>
+
+				<div class="graph DR-graph col-4">
+					DR
+				</div>
+				<div class="graph SR-graph col-4">
+					SR
+				</div>
+
+			</section>
+			<!-- es.
+			[driver_class] => 4
+			[driver_point] => 15483
+			[manner_point] => 69
+			[race_count] => 212
+			[driver_point_up_rate] => 27  ???
+			-->
+
 		</div>
-		<!-- es.
-		[driver_class] => 4
-		[driver_point] => 15483
-		[manner_point] => 69
-		[race_count] => 212
-		[driver_point_up_rate] => 27  ???
-		-->
-
 	</div>
 </body>
 </html>

@@ -34,50 +34,71 @@ h6 span{font-size:14px;}
 .carClass h2{font-size:44px;}
 }
 /* this is mine! */
+body {background-color: #333;}
+section {margin-bottom: 15px;}
+div#pagecontent {
+    position: relative;
+    width: 1024px;
+    max-width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+}
 div#robcontainer {
 width: 100%;
-max-width: 960px;
 margin: 0 auto;
 position: relative;
-top: 50%;
-transform: translateY(-50%);
+top: 10px;
+display: inline-block;
 }
-.track-image { height: 215px; }
-.carClass h2 {margin: 100px 0 0;}
+.track-image { height: 150px; }
+.carClass h2 {margin: 30px 0 0 0;}
+.race-info {padding: 10px 20px 0 20px;}
+.start-time .col-8, .start-time .col-4 {
+    border-bottom: solid 1px #333;
+    padding: 0px 20px 10px 20px;
+}
+.race-info-details .col-3, .race-info-details .col-4, .race-info-details .col-5 {
+    padding-top: 5px;
+}
 
-div#statscontainer {
-	width: 100%;
-	max-width: 400px;
-	margin: 10px auto;
-	position: relative;
-	top: -30px;
-}
-div#statscontainer h2 {
-font-size: 18px;
-background-color: rgba(51,51,51,.75);
-padding: 5px 11px;
-width: 100%;
-border-radius: 2px 2px 0 0;
-}
-div#statscontainer ul {
-width: 400px;
-background-repeat: no-repeat;
-background-position: right bottom;
-background-size: auto;
-padding: 0px 100px 10px 10px;
-list-style-type: none;
-float: left;
+.infopanel {
 font-size: 16px;
 font-weight: 700;
-background-color: rgba(51, 51, 51, 0.33);
 color: #fff;
-border: 1px solid #333;
-border-radius: 0 0 2px 2px;
 }
-div#statscontainer ul li {
+div.infopanel ul {
+	display: inline-block;
+	list-style-type: none;
+	background-color: rgba(51, 51, 51, 0.33);
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+div.infopanel ul li {
 	width:50%;
 	float: left;
+	list-style-type: none;
+	padding: 10px;
 }
+.infopanel ul li.infopanel-header {
+font-size: 18px;
+border-bottom: 1px solid #333;
+padding: 5px 10px 20px 10px;
+width: 100%;
+display: flex;
+align-items: center;
+}
+.infopanel ul li h2 { font-size: 18px; margin-left: 20px}
+.infopanel ul li.infopanel-header img {
+	border-radius: 50%;
+}
+
 span#open {
 	display: none;
 }
