@@ -46,10 +46,14 @@ h6 span{font-size:14px;}
 
 
 body {background-color: #333;}
+body.dimmed {opacity: .5;}
+
+.left { float: left;}
+.right { float: right;}
+.hidden {display:none;}
+
 section {
 	margin-bottom: 15px;
-	border-bottom: 1px solid #333;
-	padding-bottom: 15px;
 }
 div#pagecontent {
     position: relative;
@@ -64,6 +68,25 @@ div#pagecontent {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #000;
+}
+div#timecontainer {
+	position: absolute;
+	left: 50%;
+	top: -5px;
+	transform: translateX(-50%);
+	z-index: 100;
+	border-radius: 5px;
+	overflow: hidden;
+}
+div#timecontainer h2 {
+	margin: 0;
+	font-size: 3.5rem;
+	background: #EEEEEE;
+	color: #212121;
+	padding: 0px 15px;
+}
+div#timecontainer p {
+  display: none;
 }
 div#robcontainer {
 width: 100%;
@@ -92,7 +115,7 @@ div.infopanel ul {
 	background-color: rgba(51, 51, 51, 0.33);
 	border-radius: 2px;
 	box-sizing: border-box;
-	height: 210px;
+	height: 225px;
 	padding-bottom: 10px;
 }
 div.infopanel ul li {
@@ -117,9 +140,9 @@ align-items: center;
 	text-align: left;
 }
 .infopanel ul li h2 span {
-	font-size: 26;
+	font-size: 32px;
 	color: #fff;
-	font-weight: 700;
+	text-shadow: 2px 2px 0 #000;
 }
 .infopanel ul li.infopanel-header img {
 	border-radius: 50%;

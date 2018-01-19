@@ -7,7 +7,7 @@
 		<link href="css/weather-icons.min.css" rel="stylesheet" type="text/css">
 		<link href="css/weather.css?cb=<?php echo rand(0,9999); ?>" rel="stylesheet" type="text/css">
 	</head>
-  <body>
+  <body id="index">
 		<div id="pagecontent">
 			<div id="bgcontainer" class="hidden"></div>
 			<div id="gtsportraces" class="hidden"></div>

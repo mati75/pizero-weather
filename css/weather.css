@@ -337,35 +337,3 @@ div#reload svg {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-div#gtsportraces {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-#gtsportraces iframe {border:none;}
-
-div#timecontainer.gtsportraces {
-	height: 110px;
-	width: 320px;
-	left: 50%;
-	position: absolute;
-	top: -10px;
-	transform: translateX(-50%);
-	z-index: 100;
-	zoom: 0.5;
-	border-radius: 5px;
-	overflow: hidden;
-}
-div#timecontainer.gtsportraces h2 {
-	margin: 0;
-	font-size: 6.5rem;
-	-webkit-margin-before: -5px;
-	background: #EEEEEE;
-	color: #212121;
-}
-div#timecontainer.gtsportraces p {
-  display: none;
-}

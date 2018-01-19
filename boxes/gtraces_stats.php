@@ -1,13 +1,4 @@
 <?php
-$doc = new DOMDocument('1.0', 'UTF-8');
-libxml_use_internal_errors(true);
-$doc->loadHTMLFile ('http://gtsportraces.com/index.php');
-foreach ($doc->getElementsByTagName('section') as $node) {
-		$gtsportraces_html = $doc->saveHtml($node);
-}
-
-
-
 function httpPost($url,$params)
 {
   $postData = '';
@@ -83,25 +74,7 @@ if($GTapi->stats->manner_point < 10) {
 
 
 ?>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en-gb"
-      lang="en-gb" itemscope itemtype="http://schema.org/Article">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<base href="https://gtsportraces.com/" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="http://localhost/pizero-weather/css/gtraces.css" type="text/css"/>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="http://localhost/pizero-weather/js/gtraces.js"></script>
-</head>
-<body>
-	<div id="pagecontent">
-		<div id="robcontainer">
 
-			<?php echo $gtsportraces_html; ?>
-
-			<section class="stats row">
 <?php //print_r($GTapi->stats); ?>
 				<div class="infopanel col-4">
 					<ul class="race">
@@ -128,7 +101,6 @@ if($GTapi->stats->manner_point < 10) {
 					SR
 				</div>
 
-			</section>
 			<!-- es.
 			[driver_class] => 4
 			[driver_point] => 15483
@@ -136,8 +108,3 @@ if($GTapi->stats->manner_point < 10) {
 			[race_count] => 212
 			[driver_point_up_rate] => 27  ???
 			-->
-
-		</div>
-	</div>
-</body>
-</html>
