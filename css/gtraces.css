@@ -35,7 +35,11 @@ h6 span{font-size:14px;}
 }
 /* this is mine! */
 body {background-color: #333;}
-section {margin-bottom: 15px;}
+section {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #333;
+	padding-bottom: 15px;
+}
 div#pagecontent {
     position: relative;
     width: 1024px;
@@ -57,8 +61,8 @@ position: relative;
 top: 10px;
 display: inline-block;
 }
-.track-image { height: 150px; }
-.carClass h2 {margin: 30px 0 0 0;}
+.track-image { height: 190px; }
+.carClass h2 {margin: 70px 0 0 0;}
 .race-info {padding: 10px 20px 0 20px;}
 .start-time .col-8, .start-time .col-4 {
     border-bottom: solid 1px #333;
@@ -69,8 +73,6 @@ display: inline-block;
 }
 
 .infopanel {
-font-size: 16px;
-font-weight: 700;
 color: #fff;
 }
 div.infopanel ul {
@@ -84,19 +86,31 @@ div.infopanel ul li {
 	width:50%;
 	float: left;
 	list-style-type: none;
-	padding: 10px;
+	padding: 5px 0 0 0;
+	text-align: center;
 }
 .infopanel ul li.infopanel-header {
 font-size: 18px;
+font-weight: 700;
 border-bottom: 1px solid #333;
 padding: 5px 10px 20px 10px;
 width: 100%;
 display: flex;
 align-items: center;
 }
-.infopanel ul li h2 { font-size: 18px; margin-left: 20px}
+.infopanel ul li h2 {
+	font-size: 18px;
+	margin-left: 20px;
+	text-align: left;
+}
+.infopanel ul li h2 span {
+	font-size: 26;
+	color: #fff;
+	font-weight: 700;
+}
 .infopanel ul li.infopanel-header img {
 	border-radius: 50%;
+	border: 2px solid #fff;
 }
 
 span#open {
