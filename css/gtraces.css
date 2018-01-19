@@ -81,6 +81,8 @@ div.infopanel ul {
 	background-color: rgba(51, 51, 51, 0.33);
 	border-radius: 2px;
 	box-sizing: border-box;
+	height: 210px;
+	padding-bottom: 10px;
 }
 div.infopanel ul li {
 	width:50%;
