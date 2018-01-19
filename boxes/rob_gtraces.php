@@ -102,7 +102,7 @@ if($GTapi->stats->manner_point < 10) {
 			<?php echo $gtsportraces_html; ?>
 
 			<section class="stats row">
-
+<?php //print_r($GTapi->stats); ?>
 				<div class="infopanel col-4">
 					<ul class="race">
 						<li class="infopanel-header col-12"><img src="https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg" width="75" height="75" /><h2>Stats for<br /> <span>Meuro078</span></h2></li>
@@ -111,13 +111,13 @@ if($GTapi->stats->manner_point < 10) {
 						<li class="col-4">DR</li>
 						<li class="col-4">SR</li>
 
-						<li class="col-4"><h6><?php echo $GTapi->stats->race_count; ?></h6></li>
-						<li class="col-4"><h6><?php echo $DR; ?></h6></li>
-						<li class="col-4"><h6><?php echo $SR; ?></h6></li>
+						<li class="col-4 ico_RACE"><h3><?php echo $GTapi->stats->race_count; ?></h3></li>
+						<li class="col-4 ico_DR"><span><?php echo $DR; ?></span></li>
+						<li class="col-4 ico_SR"><span><?php echo $SR; ?></span></li>
 
 						<li class="col-4"></li>
-						<li class="col-4"><h4><?php echo $GTapi->stats->driver_point; ?></h4></li>
-						<li class="col-4"><h4><?php echo $GTapi->stats->manner_point; ?>/99</h4></li>
+						<li class="col-4 statpoints"><h3><?php echo $GTapi->stats->driver_point; ?></h3></li>
+						<li class="col-4 statpoints"><h3><?php echo $GTapi->stats->manner_point; ?>/99</h3></li>
 					</ul>
 				</div>
 
