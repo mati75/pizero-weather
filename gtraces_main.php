@@ -38,11 +38,13 @@ foreach ($doc->getElementsByTagName('section') as $node) {
 
 		</div>
 	</div>
-	
+
 	<div id="checkPS4" class="hidden"></div>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/pizero-weather.js"></script>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/highcharts/highcharts.src.js"></script>
+	<script src="js/highcharts/exporting.js"></script>
+	<script src="js/pizero-weather.js?cb=<?php echo rand(0,9999); ?>"></script>
 
 
 </body>

@@ -72,6 +72,8 @@ if($GTapi->stats->manner_point < 10) {
 	$SR = "N/A";
 }
 
+$SRpts= $GTapi->stats->manner_point;
+$DRpts= $GTapi->stats->driver_point;
 
 ?>
 
@@ -89,15 +91,16 @@ if($GTapi->stats->manner_point < 10) {
 						<li class="col-4 ico_SR"><span><?php echo $SR; ?></span></li>
 
 						<li class="col-4"></li>
-						<li class="col-4 statpoints"><h3><?php echo $GTapi->stats->driver_point; ?></h3></li>
-						<li class="col-4 statpoints"><h3><?php echo $GTapi->stats->manner_point; ?>/99</h3></li>
+						<li class="col-4 statpoints"><h3><?php echo $DRpts; ?></h3></li>
+						<li class="col-4 statpoints"><h3><?php echo $SRpts; ?>/99</h3></li>
 					</ul>
 				</div>
 
-				<div class="graph DR-graph col-4">
+				<div id="DRgraph" class="graph DR-graph col-4">
 					DR
+					<?php include('gtraces_graphs.php'); ?>
 				</div>
-				<div class="graph SR-graph col-4">
+				<div id="SRgraph" class="graph SR-graph col-4">
 					SR
 				</div>
 

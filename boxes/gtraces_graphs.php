@@ -1,4 +1,5 @@
 <?php
+/*
 function httpPost($url,$params)
 {
   $postData = '';
@@ -23,6 +24,7 @@ function httpPost($url,$params)
     return $output;
 
 }
+*/
 
 $begin_M = date('n',strtotime("-1 month"));
 if ($begin_M == '12') {
@@ -66,9 +68,119 @@ foreach ($GTapi->stats_history as $GTdata) {
 $GTdata_DR = substr($GTdata_DR, 0, -2);
 $GTdata_SR = substr($GTdata_SR, 0, -2);
 
-echo $GTdata_DR;
-echo "\n\n\n---------------\n\n\n";
-echo $GTdata_SR;
+// echo $GTdata_DR;
+// echo "\n\n\n---------------\n\n\n";
+// echo $GTdata_SR;
 
 //print_r($GTapi->stats_history);
 ?>
+<script>
+$(document).ready(function () {
+	Highcharts.setOptions({
+			global: {
+					useUTC: false
+			}
+	});
+
+	Highcharts.chart('DRgraph', {
+			chart: {
+					type: 'area',
+					animation: Highcharts.svg, // don't animate in old IE
+					marginRight: 10,
+			},
+			title: {
+					text: '<span class="chartTitle">DR</span> <?php echo $DRpts; ?>',
+					useHTML: true,
+			},
+			xAxis: {
+				title: {
+						text: '',
+				},
+				tickPixelInterval: 50
+			},
+			yAxis: {
+					title: {
+							text: '',
+					},
+					tickPixelInterval: 25
+			},
+			plotOptions: {
+				series: {
+					marker: {
+							enabled: false,
+					},
+          color: '#ffffff',
+					lineWidth : 2
+        }
+			},
+			legend: {
+					enabled: false
+			},
+			exporting: {
+					enabled: false
+			},
+			series: [{
+					name: 'DR points',
+					data: (function () {
+						var data = [];
+						data.push(<?php echo $GTdata_DR; ?>)
+						return data;
+					}())
+			}]
+	});
+
+
+
+	Highcharts.chart('SRgraph', {
+			chart: {
+					type: 'area',
+					animation: Highcharts.svg, // don't animate in old IE
+					marginRight: 10,
+			},
+			title: {
+				text: '<span class="chartTitle">SR</span> <?php echo $SRpts; ?>',
+				useHTML: true,
+			},
+			xAxis: {
+				title: {
+						text: '',
+				},
+				tickPixelInterval: 50
+			},
+			yAxis: {
+					title: {
+							text: '',
+					},
+					tickPixelInterval: 25
+			},
+			plotOptions: {
+				series: {
+					marker: {
+							enabled: false,
+					},
+          color: '#ffffff',
+					lineWidth : 2
+        }
+			},
+			legend: {
+					enabled: false
+			},
+			exporting: {
+					enabled: false
+			},
+			series: [{
+					name: 'SR points',
+					data: (function () {
+						var data = [];
+						data.push(<?php echo $GTdata_SR; ?>)
+						return data;
+					}())
+			}]
+	});
+
+
+
+
+
+});
+</script>
