@@ -190,3 +190,4 @@ div.graph .highcharts-title span.chartTitle {
     color: #fff!important;
     font-size: 26px!important;
 }
+.highcharts-credits {display: none;}
