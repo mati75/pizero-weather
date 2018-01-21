@@ -153,25 +153,27 @@ align-items: center;
 	color: #fff;
 	line-height: 44px;
 }
+.ico_RACE h3 {
+    font-size: 48px;
+    line-height: 90px;
+}
 .ico_DR {
-  font-family: 'GTseriesFont';
-  background: url('../img/ico_dr.svg') no-repeat center 0px;
-      background-size: auto auto;
-  background-size: 60px;
-  height: 50px;
-  font-size: 26px;
-  color: #fff;
-  line-height: 35px;
+	font-family: 'GTseriesFont';
+	background: url("../img/ico_dr.svg") no-repeat center 10px;
+	background-size: 90px;
+	height: 100px;
+	font-size: 40px;
+	color: #fff;
+	line-height: 76px;
 }
 .ico_SR {
-    font-family: 'GTseriesFont';
-    background: url('../img/ico_sr.svg') no-repeat center 0px;
-        background-size: auto auto;
-    background-size: 60px;
-    height: 50px;
-    font-size: 26px;
-    color: #fff;
-    line-height: 20px;
+  font-family: 'GTseriesFont';
+  background: url("../img/ico_sr.svg") no-repeat center 10px;
+  background-size: 90px;
+	height: 100px;
+	font-size: 40px;
+	color: #fff;
+	line-height: 50px;
 }
 span#open {
 	display: none;
@@ -184,10 +186,28 @@ div.graph .highcharts-title {
 	font-family: "Roboto",sans-serif !important;
 	font-size: 24px !important;
 	color: #fff !important;
+	display: inline-block;
+	left: 50% !important;
+	transform: translateX(-50%);
+	width: 100%;
+	text-align: center;
 }
 div.graph .highcharts-title span.chartTitle {
     font-family: 'GTseriesFont';
     color: #fff!important;
     font-size: 26px!important;
+}
+div.graph .highcharts-title span.chartValue {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    font-size: 52px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 #000;
+    background: rgba(51, 51, 51, 0.75);
+    border-radius: 5px;
+    padding: 2px 10px;
+    transform: translateX(-40%);
 }
 .highcharts-credits {display: none;}

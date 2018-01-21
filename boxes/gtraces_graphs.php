@@ -89,7 +89,7 @@ $(document).ready(function () {
 					marginRight: 10,
 			},
 			title: {
-					text: '<span class="chartTitle">DR</span> <?php echo $DRpts; ?>',
+					text: '<span class="chartTitle">DR</span><span class="chartValue"><?php echo $DRpts; ?></span>',
 					useHTML: true,
 			},
 			xAxis: {
@@ -138,7 +138,7 @@ $(document).ready(function () {
 					marginRight: 10,
 			},
 			title: {
-				text: '<span class="chartTitle">SR</span> <?php echo $SRpts; ?>',
+				text: '<span class="chartTitle">SR</span><span class="chartValue"><?php echo $SRpts; ?></span>',
 				useHTML: true,
 			},
 			xAxis: {

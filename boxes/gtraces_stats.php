@@ -90,9 +90,6 @@ $DRpts= $GTapi->stats->driver_point;
 						<li class="col-4 ico_DR"><span><?php echo $DR; ?></span></li>
 						<li class="col-4 ico_SR"><span><?php echo $SR; ?></span></li>
 
-						<li class="col-4"></li>
-						<li class="col-4 statpoints"><h3><?php echo $DRpts; ?></h3></li>
-						<li class="col-4 statpoints"><h3><?php echo $SRpts; ?>/99</h3></li>
 					</ul>
 				</div>
 
