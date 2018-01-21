@@ -14,9 +14,9 @@ foreach ($doc->getElementsByTagName('section') as $node) {
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- <base href="https://gtsportraces.com/" /> -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/gtraces.css" type="text/css"/>
+		<link rel="stylesheet" href="css/gtraces.css?cb=<?php echo rand(0,9999); ?>" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet">
-		<script src="js/gtraces.js"></script>
+		<script src="js/gtraces.js?cb=<?php echo rand(0,9999); ?>"></script>
 </head>
 <body id="gtraces">
 	<div id="pagecontent">
