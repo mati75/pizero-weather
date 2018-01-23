@@ -94,12 +94,17 @@ $DRpts= $GTapi->stats->driver_point;
 				</div>
 
 				<div id="DRgraph" class="graph DR-graph col-4">
-					DR
+					Loading DR data...
 					<?php include('gtraces_graphs.php'); ?>
 				</div>
 				<div id="SRgraph" class="graph SR-graph col-4">
-					SR
+					Loading SR data...
 				</div>
+
+				<!-- <div id="DRSRgraph" class="graph DR-graph col-8">
+					Loading DR / SR data...
+					<?php // include('gtraces_2graphs.php'); ?>
+				</div> -->
 
 			<!-- es.
 			[driver_class] => 4
