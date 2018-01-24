@@ -108,27 +108,27 @@ $(document).ready(function () {
 					gridLineWidth: 0,
 					ceiling: 70000,
 					plotBands: [{
-						color: '#FF300066', // Color value
+						color: '#6d1a07', // Color value
 						from: 0, // Start of the plot band
 						to: 2000 // End of the plot band
 					},{
-						color: '#FF600066', // Color value
+						color: '#6d2d07', // Color value
 						from: 2000, // Start of the plot band
 						to: 4000 // End of the plot band
 					},{
-						color: '#FFA00066', // Color value
+						color: '#6d4707', // Color value
 						from: 4000, // Start of the plot band
 						to: 10000 // End of the plot band
 					},{
-						color: '#FFE00066', // Color value
+						color: '#6d6107', // Color value
 						from: 10000, // Start of the plot band
 						to: 30000 // End of the plot band
 					},{
-						color: '#E0FF0066', // Color value
+						color: '#616d07', // Color value
 						from: 30000, // Start of the plot band
 						to: 50000 // End of the plot band
 					},{
-						color: '#A0FF0066', // Color value
+						color: '#476d07', // Color value
 						from: 50000, // Start of the plot band
 						to: 70000 // End of the plot band
 					}]
@@ -185,27 +185,27 @@ $(document).ready(function () {
 					gridLineWidth: 0,
 					ceiling: 100,
 					plotBands: [{
-						color: '#FF300066', // Color value
+						color: '#6d1a07', // Color value
 						from: 0, // Start of the plot band
 						to: 10 // End of the plot band
 					},{
-						color: '#FF600066', // Color value
+						color: '#6d2d07', // Color value
 						from: 10, // Start of the plot band
 						to: 20 // End of the plot band
 					},{
-						color: '#FFA00066', // Color value
+						color: '#6d4707', // Color value
 						from: 20, // Start of the plot band
 						to: 40 // End of the plot band
 					},{
-						color: '#FFE00066', // Color value
+						color: '#6d6107', // Color value
 						from: 40, // Start of the plot band
 						to: 65 // End of the plot band
 					},{
-						color: '#E0FF0066', // Color value
+						color: '#616d07', // Color value
 						from: 65, // Start of the plot band
 						to: 80 // End of the plot band
 					},{
-						color: '#A0FF0066', // Color value
+						color: '#476d07', // Color value
 						from: 80, // Start of the plot band
 						to: 120 // End of the plot band
 					}]
@@ -215,7 +215,7 @@ $(document).ready(function () {
 					marker: {
 							enabled: false,
 					},
-          color: '#ffffff33',
+          color: '#ffffff',
 					lineWidth : 2
         }
 			},

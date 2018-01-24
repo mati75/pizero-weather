@@ -162,10 +162,9 @@ div.infopanel ul li {
 font-size: 18px;
 font-weight: 700;
 border-bottom: 1px solid #333;
-padding: 5px 10px 20px 10px;
+padding: 20px 10px;
+display: inline-block;
 width: 100%;
-display: flex;
-align-items: center;
 }
 .infopanel ul li h2 {
 	font-size: 18px;
@@ -246,5 +245,8 @@ div.graph .highcharts-title span.chartValue {
 	padding: 0px 10px;
 	transform: translateX(-40%);
 	line-height: 52px;
+}
+div.graph .highcharts-area {
+    fill: rgba(255,255,255,.33);
 }
 .highcharts-credits {display: none;}

@@ -79,18 +79,24 @@ $DRpts= $GTapi->stats->driver_point;
 
 <?php //print_r($GTapi->stats); ?>
 				<div class="infopanel col-4">
-					<ul class="race">
-						<li class="infopanel-header col-12"><img src="https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg" width="75" height="75" /><h2>Stats for<br /> <span>Meuro078</span></h2></li>
+					<div class="row">
+						<ul class="race col-12">
+							<li class="infopanel-header">
+								<span class="left"><img src="https://s3.amazonaws.com/gt7sp-prod/photo/20/22/58/<?php echo str_replace('-','_',$GTapi->stats->profile_photo_id); ?>.jpg" width="75" height="75" />
+								</span>
+								<h2 class="left">Stats for<br /> <span>Meuro078</span></h2>
+							</li>
 
-						<li class="col-4">Races</li>
-						<li class="col-4">DR</li>
-						<li class="col-4">SR</li>
+							<li class="col-4">Races</li>
+							<li class="col-4">DR</li>
+							<li class="col-4">SR</li>
 
-						<li class="col-4 ico_RACE"><h3><?php echo $GTapi->stats->race_count; ?></h3></li>
-						<li class="col-4 ico_DR"><span><?php echo $DR; ?></span></li>
-						<li class="col-4 ico_SR"><span><?php echo $SR; ?></span></li>
+							<li class="col-4 ico_RACE"><h3><?php echo $GTapi->stats->race_count; ?></h3></li>
+							<li class="col-4 ico_DR"><span><?php echo $DR; ?></span></li>
+							<li class="col-4 ico_SR"><span><?php echo $SR; ?></span></li>
 
-					</ul>
+						</ul>
+					</div>
 				</div>
 
 				<div id="DRgraph" class="graph DR-graph col-4">
