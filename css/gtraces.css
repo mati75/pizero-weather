@@ -249,7 +249,6 @@ div.graph .highcharts-title span.chartValue {
 	text-shadow: 2px 2px 0 #000;
 	border-radius: 2px;
 	padding: 0px 10px;
-	transform: translateX(-40%);
 	line-height: 52px;
 }
 div.graph .highcharts-area {
