@@ -242,7 +242,8 @@ div.graph .highcharts-title span.chartValue {
 	display: block;
 	position: absolute;
 	top: 135px;
-	left: 50%;
+	left: 0;
+	width: 100%
 	font-size: 52px;
 	font-weight: 700;
 	text-shadow: 2px 2px 0 #000;
