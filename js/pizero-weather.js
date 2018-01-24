@@ -75,13 +75,12 @@ jQuery(document).ready(function(){
 
 	}
 	else if (PageID == 'gtraces') {
-		console.log('eccoci...');
 		loadblock('#timecontainer','clock.php',1);
 		loadblock('#statscontainer','gtraces_stats.php',5);
 	}
 
 	setInterval(function(){
-		checkPS4('192.168.1.128');
+		//checkPS4('192.168.1.128');
 	}, 3*60000);
 
 });
