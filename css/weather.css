@@ -140,20 +140,22 @@ div#chartcontainer h3.temp {
   position: absolute;
   top: 30px;
   z-index: 0;
-  left: 50%;
+  left: 0;
   font-size: 3.25rem;
   font-weight: 400;
-  transform: translateX(-50%);
+	width: 100%;
+	text-align: center;
   margin: 0;
 }
 div#chartcontainer h3.press {
 position: absolute;
 top: 150px;
 z-index: 0;
-left: 50%;
+left: 0;
 font-size: 3.25rem;
 font-weight: 400;
-transform: translateX(-50%);
+width: 100%;
+text-align: center;
 margin: 0;
 }
 div#chartcontainer h3.press small { font-size: 1.25rem; }
