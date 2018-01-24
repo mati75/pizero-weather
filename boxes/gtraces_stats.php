@@ -100,16 +100,3 @@ $DRpts= $GTapi->stats->driver_point;
 				<div id="SRgraph" class="graph SR-graph col-4">
 					Loading SR data...
 				</div>
-
-				<!-- <div id="DRSRgraph" class="graph DR-graph col-8">
-					Loading DR / SR data...
-					<?php // include('gtraces_2graphs.php'); ?>
-				</div> -->
-
-			<!-- es.
-			[driver_class] => 4
-			[driver_point] => 15483
-			[manner_point] => 69
-			[race_count] => 212
-			[driver_point_up_rate] => 27  ???
-			-->
