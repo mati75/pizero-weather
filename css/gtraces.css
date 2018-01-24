@@ -214,10 +214,10 @@ span#open {
 
 div.graph {
 	padding-left: 0;
-	max-height: 245px;
-	overflow: hidden; 
+	height: 245px;
+	overflow: hidden;
 }
-div.graph .highcharts-container { background: rgba(51,51,51,0.25); }
+div.graph .highcharts-container { background: rgba(51,51,51,0.25); height: 245px; }
 div.graph .highcharts-background { fill: transparent; }
 div.graph .highcharts-title {
 	font-family: "Roboto",sans-serif !important;
