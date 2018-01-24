@@ -80,7 +80,7 @@ jQuery(document).ready(function(){
 	}
 
 	setInterval(function(){
-		//checkPS4('192.168.1.128');
+		checkPS4('192.168.1.128');
 	}, 3*60000);
 
 });
