@@ -230,8 +230,6 @@ div.graph .highcharts-title {
 	font-size: 24px !important;
 	color: #fff !important;
 	display: inline-block;
-	left: 50% !important;
-	transform: translateX(-50%);
 	width: 100%;
 	text-align: center;
 }
