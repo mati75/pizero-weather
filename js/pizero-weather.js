@@ -54,6 +54,7 @@ var ColorTemp = function(target) {
 
 jQuery(document).ready(function(){
 
+	jQuery('#pageloader > div').addClass('sk-folding-cube').html("\n<div class=\"sk-cube1 sk-cube\"></div>\n<div class=\"sk-cube2 sk-cube\"></div>\n<div class=\"sk-cube4 sk-cube\"></div>\n<div class=\"sk-cube3 sk-cube\"></div>\n").parent().addClass('loading');
 
 	if (PageID == 'index') {
 		loadblock('#timecontainer','clock.php',1);
@@ -85,6 +86,9 @@ jQuery(document).ready(function(){
 
 });
 jQuery(window).on("load", function() {
+
+	jQuery('#pageloader > div').removeClass('sk-folding-cube').html("").parent().addClass('hidden').removeClass('loading');
+
 	if (PageID == 'index') {
 		reloadBtn.removeClass("rotate");
 		ColorTemp('weathercontainer');
