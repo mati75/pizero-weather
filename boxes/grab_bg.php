@@ -10,5 +10,5 @@ if(scandir($dir) == false) {
 }
 ?>
 	<script>
-		document.getElementById('pagecontent').setAttribute("style", "background-image: url('<?php echo $dir.'/'.$images[$i] ?>');");
+		document.getElementById('pagecontent').setAttribute("style", "background-image: url('<?php echo $dir.$images[$i] ?>');");
 	</script>
