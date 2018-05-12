@@ -1,11 +1,11 @@
 <?php
 // we have a local folder, choose a random image in it:
-$dir = "../backgrounds/";
+$dir = "backgrounds/";
 if(scandir($dir) == false) {
 	echo 'falZo';
 	die();
 } else {
-	$images = scandir($dir);
+	$images = scandir('../'.$dir);
 	$i = rand(2, sizeof($images)-1);
 }
 ?>
