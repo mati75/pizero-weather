@@ -1,7 +1,7 @@
 <?php
 // we have a local folder, choose a random image in it:
 $dir = "backgrounds/";
-if(scandir($dir) == false) {
+if(scandir('../'.$dir) == false) {
 	echo 'falZo';
 	die();
 } else {
