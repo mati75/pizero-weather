@@ -207,18 +207,21 @@ div#forecastcontainer {
 	color: rgb(255, 255, 255);
   text-shadow: 0px 0px 1px #000;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
 }
 div#forecastcontainer div.forecast-12hrs {
 	position: absolute;
 	bottom: 0;
-	border-left: 1px solid rgba(255, 255, 255, .33);
-	padding-left: 15px;
+	left: -5px;
+	padding-left: 5px;
 	box-sizing: border-box;
+	background: rgba(0,0,0,0.25);
+	border-radius: 4px;
 }
 div#forecastcontainer div.forecast-5day {
-  border-left: 1px solid rgba(255, 255, 255, .33);
+	background: rgba(0,0,0,0.25);
+	border-radius: 4px;
 	box-sizing: border-box;
 }
 time {
@@ -339,3 +342,14 @@ div#reload svg {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+div#checkPS4 {
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+  width: 60px;
+  height: 60px;
+}
+div#checkPS4 img { max-width: 100%; }

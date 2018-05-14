@@ -22,10 +22,10 @@ var loadblock = function(target,blockname,interval) {
 }
 
 var checkPS4 = function(ip) {
-	jQuery('#checkPS4').load("boxes/check_ip.php?ip="+ip+" #response");
+	jQuery('#checkPS4').load("boxes/check_ip.php?ip="+ip+" #PS4response");
 
 	setTimeout(function(){
-		if (jQuery('#response').text() == 'online'){
+		if (jQuery('#PS4response').text() == 'online'){
 			//console.log('PS4 is turned ON');
 			if (PageID != 'gtraces') {
 				document.location.href = './gtraces_main.php';
@@ -38,8 +38,6 @@ var checkPS4 = function(ip) {
 		}
 
 	}, 5000);
-
-
 }
 
 var ColorTemp = function(target) {
@@ -77,12 +75,15 @@ jQuery(document).ready(function(){
 	}
 	else if (PageID == 'gtraces') {
 		loadblock('#timecontainer','clock.php',1);
+		jQuery('#timecontainer').on('click',function(){
+			document.location.href = './index.php';
+		});
 		loadblock('#statscontainer','gtraces_stats.php',5);
 	}
 
-	setInterval(function(){
-		checkPS4('192.168.1.128');
-	}, 3*60000);
+	// setInterval(function(){
+	// 	checkPS4('192.168.1.128');
+	// }, 3*60000);
 
 });
 jQuery(window).on("load", function() {

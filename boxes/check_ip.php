@@ -11,7 +11,7 @@ $host = $_GET['ip'];
 $up = ping($host);
 
 
-echo "<div id=\"response\">";
+echo "<div id=\"PS4response\" class=\"";
 echo $up ? 'online' : 'offline';
-echo "</div>";
+echo "\"></div>";
 ?>
