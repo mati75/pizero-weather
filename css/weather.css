@@ -42,9 +42,13 @@ div.width66 {width: 66.66666%;}
 div.width75 {width: 75%;}
 
 div.col1 {
-    background: rgba(0,0,0,0.25);
-    margin: 0 0 0 -5px;
-    height: 100vh;
+	background: rgba(0,0,0,0.25);
+	margin: 0 0 0 -5px;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
 }
 
 div.col > div {
@@ -311,6 +315,20 @@ div#forecastcontainer ul li.icon small {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
+}
+
+div#blurrything {
+	filter: blur(8px);
+	background-size: cover;
+	background-position: left;
+	width: 1024px;
+	max-width: calc(25% + 10px);
+	height: 600px;
+	position: absolute;
+	left: -10px;
+	top: 0;
+	margin: 0;
+	z-index: 0;
 }
 
 div#reload {
