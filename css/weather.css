@@ -29,7 +29,8 @@ div#pagecontent {
 	background-position: center;
 	background-color: #212121;
 }
-.dimmed #pagecontent {opacity:0.25}
+/* .dimmed #pagecontent {opacity:0.25} */
+.dimmed #pagecontent { filter: brightness(0.33) contrast(1.1); }
 div.col {
 	margin: 10px 0;
 	padding: 0 5px;
