@@ -51,7 +51,11 @@ div.col1 {
 	top: 0;
 	z-index: 10;
 }
-
+div.col2 {
+	position: absolute;
+	left: 25%;
+	top: 0;
+}
 div.col > div {
 	border-radius: 3px;
 	margin-bottom: 10px;
